@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Future School</title>
-    <!-- Google Fonts for a clean, modern look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyankunja EBS Dang | School</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -20,49 +21,50 @@
         body {
             font-family: 'Inter', sans-serif;
             color: #1e293b;
+            background: #faf9f6;
             line-height: 1.6;
-            background-color: #f8fafc;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* --- Top Bar --- */
+        /* ===== TOP BAR ===== */
         .top-bar {
-            background-color: #1e293b;
+            background: #0f172a;
             color: #e2e8f0;
             padding: 8px 0;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
         .top-bar .container {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 6px;
         }
         .top-bar a {
             color: #e2e8f0;
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 18px;
         }
         .top-bar a:hover {
-            color: #facc15;
+            color: #fcd34d;
         }
         .top-bar i {
             margin-right: 6px;
-            color: #facc15;
+            color: #fcd34d;
         }
 
-        /* --- Navigation --- */
+        /* ===== NAVIGATION ===== */
         nav {
-            background-color: #ffffff;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background: #ffffff;
+            padding: 12px 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 999;
         }
         nav .container {
             display: flex;
@@ -71,226 +73,521 @@
             flex-wrap: wrap;
         }
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo img {
+            height: 55px;
+            width: auto;
+            border-radius: 8px;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 900;
             color: #0f172a;
+            line-height: 1.2;
         }
-        .logo span {
-            color: #3b82f6;
+        .logo-text span {
+            color: #2563eb;
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #64748b;
         }
+
         .nav-links {
             display: flex;
-            gap: 30px;
+            align-items: center;
+            gap: 24px;
             list-style: none;
             font-weight: 600;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
         }
         .nav-links a {
             text-decoration: none;
             color: #1e293b;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: #3b82f6;
-        }
-        .nav-links .btn-outline {
-            border: 2px solid #3b82f6;
-            padding: 6px 18px;
-            border-radius: 30px;
-            color: #3b82f6;
             transition: 0.3s;
+            padding: 6px 0;
+            border-bottom: 3px solid transparent;
         }
-        .nav-links .btn-outline:hover {
-            background-color: #3b82f6;
-            color: #fff;
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+        }
+        .nav-links .btn-nav {
+            background: #2563eb;
+            color: #fff !important;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            border-bottom: none;
+        }
+        .nav-links .btn-nav:hover {
+            background: #1d4ed8;
+            transform: scale(1.03);
+            border-bottom: none;
         }
 
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 80px 0;
-            border-bottom: 6px solid #facc15;
+        /* ===== HERO SLIDER ===== */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            background: #0f172a;
         }
-        .hero .container {
+        .hero-slider .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            background-size: cover;
+            background-position: center;
         }
-        .hero-text {
-            flex: 1 1 50%;
+        .hero-slider .slide.active {
+            opacity: 1;
         }
-        .hero-text h1 {
+        .hero-slider .slide::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.5);
+        }
+        .hero-slider .slide-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+        .hero-slider .slide-content h1 {
             font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
+            font-weight: 900;
+            margin-bottom: 16px;
         }
-        .hero-text h1 span {
-            color: #facc15;
+        .hero-slider .slide-content h1 span {
+            color: #fcd34d;
         }
-        .hero-text p {
+        .hero-slider .slide-content p {
             font-size: 1.2rem;
-            color: #cbd5e1;
-            max-width: 500px;
-            margin-bottom: 30px;
+            opacity: 0.9;
+            margin-bottom: 24px;
         }
-        .hero-text .btn-primary {
-            background-color: #facc15;
+        .hero-slider .slide-content .btn-slide {
+            background: #fcd34d;
             color: #0f172a;
-            padding: 14px 36px;
+            padding: 12px 36px;
             border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
             display: inline-block;
             transition: 0.3s;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
         }
-        .hero-text .btn-primary:hover {
-            background-color: #eab308;
+        .hero-slider .slide-content .btn-slide:hover {
+            background: #fbbf24;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(250, 204, 21, 0.3);
-        }
-        .hero-image {
-            flex: 1 1 40%;
-            text-align: center;
-            font-size: 8rem;
-            color: #facc15;
-            opacity: 0.8;
         }
 
-        /* --- Features / Values --- */
-        .features {
-            padding: 70px 0;
-            background-color: #fff;
+        /* Slider dots */
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
         }
-        .features h2 {
-            text-align: center;
-            font-size: 2.2rem;
+        .slider-dots .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+        .slider-dots .dot.active {
+            background: #fcd34d;
+            border-color: white;
+            transform: scale(1.2);
+        }
+        .slider-dots .dot:hover {
+            background: #fcd34d;
+        }
+
+        /* Slider arrows */
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 16px 22px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .slider-arrow:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .slider-arrow.prev {
+            left: 20px;
+        }
+        .slider-arrow.next {
+            right: 20px;
+        }
+
+        /* ===== NOTICE POPUP ===== */
+        .notice-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            backdrop-filter: blur(4px);
+        }
+        .notice-popup.show {
+            display: flex;
+        }
+        .notice-popup .popup-box {
+            background: white;
+            max-width: 520px;
+            width: 92%;
+            border-radius: 20px;
+            padding: 40px 35px 30px;
+            position: relative;
+            animation: popIn 0.4s ease;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border-top: 8px solid #fcd34d;
+        }
+        @keyframes popIn {
+            from {
+                transform: scale(0.8) translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+        .notice-popup .popup-box .close-popup {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            font-size: 1.8rem;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: 0.3s;
+            background: none;
+            border: none;
+        }
+        .notice-popup .popup-box .close-popup:hover {
+            color: #ef4444;
+            transform: rotate(90deg);
+        }
+        .notice-popup .popup-box .popup-icon {
+            font-size: 3rem;
+            color: #fcd34d;
+            margin-bottom: 8px;
+        }
+        .notice-popup .popup-box h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+        .notice-popup .popup-box .popup-date {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+        .notice-popup .popup-box p {
+            color: #475569;
             margin-bottom: 20px;
+            line-height: 1.7;
         }
-        .features .subtitle {
+        .notice-popup .popup-box .popup-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .notice-popup .popup-box .popup-btn:hover {
+            background: #1d4ed8;
+        }
+        .notice-popup .popup-box .dismiss-text {
+            display: block;
+            margin-top: 12px;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .notice-popup .popup-box .dismiss-text:hover {
+            color: #475569;
+        }
+
+        /* ===== MESSAGE SECTION ===== */
+        .messages {
+            padding: 70px 0;
+            background: #ffffff;
+        }
+        .messages h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .messages .subtitle {
             text-align: center;
             color: #64748b;
             max-width: 600px;
             margin: 0 auto 50px auto;
         }
-        .feature-grid {
+        .message-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
         }
-        .feature-card {
+        .message-card {
             background: #f8fafc;
-            padding: 35px 25px;
-            border-radius: 16px;
+            border-radius: 20px;
+            padding: 30px 24px;
             text-align: center;
-            transition: 0.3s;
             border: 1px solid #e2e8f0;
+            transition: 0.3s;
         }
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+        .message-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
         }
-        .feature-card i {
-            font-size: 2.8rem;
-            color: #3b82f6;
-            margin-bottom: 20px;
+        .message-card .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px;
+            border: 4px solid #fcd34d;
+            display: block;
+            background: #dbeafe;
         }
-        .feature-card h3 {
-            margin-bottom: 10px;
-        }
-        .feature-card p {
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-
-        /* --- Events / News --- */
-        .events {
-            padding: 70px 0;
-            background-color: #f1f5f9;
-        }
-        .events h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-        }
-        .event-list {
+        .message-card .avatar-placeholder {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .event-item {
-            background: white;
-            padding: 20px 30px;
-            border-radius: 12px;
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            border-left: 6px solid #3b82f6;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            justify-content: center;
+            font-size: 3.5rem;
+            background: #dbeafe;
+            color: #2563eb;
+            border: 4px solid #fcd34d;
         }
-        .event-item .date {
-            background: #0f172a;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 30px;
+        .message-card h4 {
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+        .message-card .title {
+            color: #2563eb;
             font-weight: 600;
             font-size: 0.85rem;
+            margin-bottom: 8px;
         }
-        .event-item .title {
-            font-weight: 600;
-            flex: 1;
-            margin: 0 20px;
+        .message-card p {
+            color: #475569;
+            font-size: 0.92rem;
+            font-style: italic;
         }
-        .event-item .tag {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 4px 14px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
+        .message-card .quote-icon {
+            color: #fcd34d;
+            font-size: 1.8rem;
+            opacity: 0.4;
+            margin-bottom: 4px;
         }
 
-        /* --- Footer --- */
+        /* ===== NOTICE SHORTCUTS ===== */
+        .notice-shortcuts {
+            padding: 50px 0;
+            background: #f1f5f9;
+        }
+        .notice-shortcuts h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .notice-shortcuts .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+        .notice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .notice-item {
+            background: white;
+            padding: 22px 24px;
+            border-radius: 16px;
+            border-left: 6px solid #fcd34d;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            transition: 0.3s;
+        }
+        .notice-item:hover {
+            transform: translateX(6px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        }
+        .notice-item .n-date {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+        .notice-item h4 {
+            font-size: 1.05rem;
+            margin: 4px 0 6px;
+        }
+        .notice-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .notice-item .n-tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 12px;
+            border-radius: 30px;
+            margin-top: 8px;
+        }
+
+        /* ===== FACEBOOK & MAP SECTION ===== */
+        .social-map {
+            padding: 60px 0;
+            background: #ffffff;
+        }
+        .social-map .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .social-map .box {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+        }
+        .social-map .box .box-header {
+            background: #0f172a;
+            color: white;
+            padding: 14px 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .social-map .box .box-header i {
+            font-size: 1.4rem;
+            color: #fcd34d;
+        }
+        .social-map .box iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            display: block;
+        }
+        .social-map .fb-page-container {
+            padding: 16px;
+            background: #f8fafc;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-map .fb-page-container .fb-placeholder {
+            text-align: center;
+            color: #94a3b8;
+        }
+        .social-map .fb-page-container .fb-placeholder i {
+            font-size: 4rem;
+            color: #1877f2;
+            margin-bottom: 12px;
+        }
+
+        /* ===== FOOTER ===== */
         footer {
-            background-color: #0f172a;
+            background: #0f172a;
             color: #e2e8f0;
-            padding: 40px 0 20px;
+            padding: 50px 0 20px;
         }
         footer .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+            gap: 40px;
         }
         footer h4 {
             color: white;
             margin-bottom: 16px;
             font-size: 1.1rem;
+            font-weight: 700;
         }
-        footer p, footer a {
+        footer h4 i {
+            color: #fcd34d;
+            margin-right: 8px;
+        }
+        footer p,
+        footer a {
             color: #94a3b8;
             text-decoration: none;
             display: block;
             margin-bottom: 8px;
             font-size: 0.9rem;
+            transition: 0.3s;
         }
         footer a:hover {
-            color: #facc15;
+            color: #fcd34d;
+            padding-left: 4px;
         }
-        footer .social i {
-            font-size: 1.4rem;
-            margin-right: 12px;
+        footer .social-icons {
+            display: flex;
+            gap: 14px;
+            margin-top: 8px;
+        }
+        footer .social-icons a {
+            display: inline-block;
+            font-size: 1.5rem;
             color: #94a3b8;
             transition: 0.3s;
         }
-        footer .social i:hover {
-            color: #facc15;
+        footer .social-icons a:hover {
+            color: #fcd34d;
+            transform: translateY(-3px);
+            padding-left: 0;
         }
         .copyright {
             text-align: center;
@@ -301,147 +598,308 @@
             font-size: 0.85rem;
             grid-column: 1 / -1;
         }
+        .copyright span {
+            color: #fcd34d;
+        }
 
-        /* --- Responsive --- */
-        @media (max-width: 768px) {
-            .hero-text h1 {
-                font-size: 2.2rem;
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .social-map .container {
+                grid-template-columns: 1fr;
             }
-            .hero-image {
-                font-size: 4rem;
-                margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 380px;
+            }
+            .hero-slider .slide-content h1 {
+                font-size: 2rem;
+            }
+            .hero-slider .slide-content p {
+                font-size: 1rem;
+            }
+            .slider-arrow {
+                padding: 10px 16px;
+                font-size: 1.1rem;
             }
             .nav-links {
-                gap: 15px;
+                gap: 14px;
+                font-size: 0.8rem;
                 margin-top: 10px;
+            }
+            .logo img {
+                height: 40px;
+            }
+            .logo-text {
+                font-size: 1.1rem;
             }
             .top-bar .container {
                 flex-direction: column;
                 align-items: center;
-                gap: 5px;
+                text-align: center;
             }
-            .event-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+            .message-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
             }
-            .event-item .title {
-                margin: 0;
+        }
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 320px;
+            }
+            .hero-slider .slide-content h1 {
+                font-size: 1.5rem;
+            }
+            .slider-arrow {
+                display: none;
+            }
+            .notice-popup .popup-box {
+                padding: 30px 20px 24px;
+            }
+            .notice-popup .popup-box h2 {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar -->
+    <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="container">
             <div>
-                <i class="fas fa-phone-alt"></i> +1 (555) 123-4567
-                <i class="fas fa-envelope" style="margin-left: 20px;"></i> info@brightfuture.edu
+                <i class="fas fa-phone-alt"></i> +977-985-1234567
+                <i class="fas fa-envelope" style="margin-left: 16px;"></i> info@gyankunja.edu.np
             </div>
             <div>
                 <a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a>
                 <a href="#"><i class="fas fa-user-graduate"></i> Parent Portal</a>
+                <a href="#"><i class="fas fa-facebook"></i> Follow Us</a>
             </div>
         </div>
     </div>
 
-    <!-- Navigation -->
+    <!-- ===== NAVIGATION ===== -->
     <nav>
         <div class="container">
-            <div class="logo">Bright<span>Future</span></div>
+            <a href="#" class="logo">
+                <!-- Replace 'logo.png' with your actual logo file -->
+                <img src="https://via.placeholder.com/60x60/0f172a/fcd34d?text=GY" alt="Gyankunja Logo" />
+                <div class="logo-text">
+                    Gyankunja EBS Dang
+                    <span>Excellence • Beyond • Standards</span>
+                </div>
+            </a>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Academics</a></li>
-                <li><a href="#">Admissions</a></li>
-                <li><a href="#" class="btn-outline">Contact</a></li>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#notices">Notices</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#staff">School Staff</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn-nav">Admissions</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-text">
-                <h1>Building <span>Bright</span> Minds for Tomorrow</h1>
-                <p>Empowering students with knowledge, character, and the skills to thrive in a changing world.</p>
-                <a href="#" class="btn-primary">Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+    <!-- ===== HERO SLIDER ===== -->
+    <div class="hero-slider" id="home">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=500&fit=crop');">
+            <div class="slide-content">
+                <h1>Welcome to <span>Gyankunja EBS Dang</span></h1>
+                <p>Nurturing young minds from Pre-Nursery to Grade 12 with excellence and care.</p>
+                <a href="#" class="btn-slide">Explore Our School</a>
             </div>
-            <div class="hero-image">
-                <i class="fas fa-graduation-cap"></i>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=500&fit=crop');">
+            <div class="slide-content">
+                <h1>State-of-the-Art <span>Facilities</span></h1>
+                <p>Modern classrooms, science labs, sports grounds, and a vibrant learning environment.</p>
+                <a href="#" class="btn-slide">Take a Tour</a>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1200&h=500&fit=crop');">
+            <div class="slide-content">
+                <h1>Holistic <span>Education</span></h1>
+                <p>Academic excellence combined with arts, sports, and character development.</p>
+                <a href="#" class="btn-slide">Learn More</a>
+            </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1200&h=500&fit=crop');">
+            <div class="slide-content">
+                <h1>Our <span>Graduates</span> Shine</h1>
+                <p>Preparing students for top universities and successful careers worldwide.</p>
+                <a href="#" class="btn-slide">Alumni Stories</a>
+            </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+
+        <!-- Arrows -->
+        <button class="slider-arrow prev" onclick="changeSlide(-1)">❮</button>
+        <button class="slider-arrow next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <!-- ===== NOTICE POPUP ===== -->
+    <div class="notice-popup" id="noticePopup">
+        <div class="popup-box">
+            <button class="close-popup" onclick="closePopup()">✕</button>
+            <div class="popup-icon">📢</div>
+            <h2>📌 Important Notice</h2>
+            <div class="popup-date"><i class="far fa-calendar-alt"></i> Updated: July 15, 2026</div>
+            <p>
+                <strong>Admissions Open for Academic Year 2026-27!</strong><br /><br />
+                We are now accepting applications for Pre-Nursery to Grade 12. 
+                Limited seats available. <strong>Early bird discount</strong> for applications submitted before August 10.
+                <br /><br />
+                📞 Call us at +977-985-1234567 for inquiries.
+            </p>
+            <button class="popup-btn" onclick="closePopup()">I Understand</button>
+            <span class="dismiss-text" onclick="dismissNotice()">Don't show this again for 7 days</span>
+        </div>
+    </div>
+
+    <!-- ===== MESSAGE SECTION ===== -->
+    <section class="messages" id="about">
+        <div class="container">
+            <h2>💬 Messages from Our Leaders</h2>
+            <p class="subtitle">Words of inspiration from the visionaries who guide Gyankunja EBS Dang.</p>
+            <div class="message-grid">
+                <!-- Principal -->
+                <div class="message-card">
+                    <div class="avatar-placeholder">👩‍🏫</div>
+                    <!-- Replace src with actual photo -->
+                    <img src="https://via.placeholder.com/100x100/2563eb/white?text=Principal" alt="Principal" class="avatar" style="display:none;" />
+                    <h4>Mrs. Sunita Sharma</h4>
+                    <div class="title">Principal</div>
+                    <div class="quote-icon">"</div>
+                    <p>"At Gyankunja, we believe every child is a seed with infinite potential. Our role is to provide the right soil, sunlight, and water for them to grow into magnificent trees."</p>
+                </div>
+                <!-- HOD -->
+                <div class="message-card">
+                    <div class="avatar-placeholder">👨‍🏫</div>
+                    <h4>Mr. Ram Prasad Adhikari</h4>
+                    <div class="title">Head of Academics (HOD)</div>
+                    <div class="quote-icon">"</div>
+                    <p>"Academic excellence is not just about grades — it's about nurturing curiosity, critical thinking, and a lifelong love for learning. Our curriculum is designed to inspire."</p>
+                </div>
+                <!-- President -->
+                <div class="message-card">
+                    <div class="avatar-placeholder">👨‍💼</div>
+                    <h4>Mr. Krishna Bahadur Thapa</h4>
+                    <div class="title">President, EBS Dang</div>
+                    <div class="quote-icon">"</div>
+                    <p>"Education is the most powerful weapon to change the world. Gyankunja EBS Dang is committed to producing not just graduates, but responsible global citizens and future leaders."</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="features">
+    <!-- ===== NOTICE SHORTCUTS ===== -->
+    <section class="notice-shortcuts" id="notices">
         <div class="container">
-            <h2>Why Choose Bright Future?</h2>
-            <p class="subtitle">We provide a nurturing environment where every student can discover their potential.</p>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h3>Expert Teachers</h3>
-                    <p>Passionate educators dedicated to personalized learning and student success.</p>
+            <h2>📋 Latest Notices</h2>
+            <p class="subtitle">Stay updated with important announcements and events.</p>
+            <div class="notice-grid">
+                <div class="notice-item">
+                    <div class="n-date"><i class="far fa-calendar-alt"></i> July 15, 2026</div>
+                    <h4>📢 Admissions Open 2026-27</h4>
+                    <p>Applications are now being accepted for all grades. Early bird discount available.</p>
+                    <span class="n-tag">Important</span>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-flask"></i>
-                    <h3>Innovative STEM</h3>
-                    <p>State-of-the-art labs and programs that prepare students for the future.</p>
+                <div class="notice-item" style="border-left-color:#2563eb;">
+                    <div class="n-date"><i class="far fa-calendar-alt"></i> July 12, 2026</div>
+                    <h4>🏆 Annual Sports Day</h4>
+                    <p>Save the date! Our annual sports day will be held on August 25. All students invited.</p>
+                    <span class="n-tag" style="background:#fef3c7; color:#b45309;">Event</span>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-futbol"></i>
-                    <h3>Arts & Athletics</h3>
-                    <p>A balanced curriculum with award-winning sports, music, and art programs.</p>
+                <div class="notice-item" style="border-left-color:#10b981;">
+                    <div class="n-date"><i class="far fa-calendar-alt"></i> July 10, 2026</div>
+                    <h4>📚 Parent-Teacher Meeting</h4>
+                    <p>PTM for Grades 6-12 on July 30. Progress reports will be distributed.</p>
+                    <span class="n-tag" style="background:#d1fae5; color:#065f46;">Meeting</span>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>Safe Community</h3>
-                    <p>A supportive, inclusive environment where every child feels valued.</p>
+                <div class="notice-item" style="border-left-color:#8b5cf6;">
+                    <div class="n-date"><i class="far fa-calendar-alt"></i> July 8, 2026</div>
+                    <h4>🎨 Art Exhibition</h4>
+                    <p>Our students' artwork will be displayed at the City Hall on August 5-7.</p>
+                    <span class="n-tag" style="background:#ede9fe; color:#5b21b6;">Cultural</span>
                 </div>
+            </div>
+            <div style="text-align:center; margin-top:30px;">
+                <a href="#" style="color:#2563eb; font-weight:700; text-decoration:none;">
+                    View All Notices <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Events -->
-    <section class="events">
+    <!-- ===== FACEBOOK & MAP ===== -->
+    <section class="social-map" id="contact">
         <div class="container">
-            <h2>📅 Upcoming Events</h2>
-            <div class="event-list">
-                <div class="event-item">
-                    <span class="date">Aug 28</span>
-                    <span class="title">Open House & Campus Tour</span>
-                    <span class="tag">For New Families</span>
+            <!-- Facebook Box -->
+            <div class="box">
+                <div class="box-header">
+                    <i class="fab fa-facebook"></i> Follow Us on Facebook
                 </div>
-                <div class="event-item">
-                    <span class="date">Sep 5</span>
-                    <span class="title">First Day of School – Fall Semester</span>
-                    <span class="tag">All Students</span>
+                <div class="fb-page-container">
+                    <div class="fb-placeholder">
+                        <i class="fab fa-facebook"></i>
+                        <h4>Gyankunja EBS Dang</h4>
+                        <p>Connect with us on Facebook for daily updates, photos, and events.</p>
+                        <a href="#" style="display:inline-block; margin-top:12px; background:#1877f2; color:white; padding:10px 30px; border-radius:40px; text-decoration:none; font-weight:700;">
+                            <i class="fab fa-facebook"></i> Visit Our Page
+                        </a>
+                        <!-- Replace the href above with your actual Facebook page URL -->
+                        <!-- For actual Facebook Page Plugin, replace the div below with:
+                        <div class="fb-page" data-href="https://www.facebook.com/yourpage" data-tabs="timeline" data-width="100%" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+                        -->
+                    </div>
                 </div>
-                <div class="event-item">
-                    <span class="date">Sep 15</span>
-                    <span class="title">Parent-Teacher Conference Night</span>
-                    <span class="tag">Virtual</span>
+            </div>
+
+            <!-- Google Map Box -->
+            <div class="box">
+                <div class="box-header">
+                    <i class="fas fa-map-marker-alt"></i> Find Us Here
                 </div>
-                <div class="event-item">
-                    <span class="date">Sep 22</span>
-                    <span class="title">Annual Science Fair</span>
-                    <span class="tag">Grades 6-12</span>
-                </div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.123456789!2d82.489123!3d28.001234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMwJzAwLjAiTiA4MsKwMjknMjAuMCJF!5e0!3m2!1sen!2snp!4v1234567890" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <!-- Replace the src above with your actual Google Maps embed URL -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <div>
-                <h4>Bright Future School</h4>
-                <p>123 Education Lane,<br>Knowledge City, KC 10001</p>
-                <p><i class="fas fa-phone" style="margin-right: 8px;"></i>+1 (555) 123-4567</p>
-                <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>info@brightfuture.edu</p>
+                <h4><i class="fas fa-graduation-cap"></i> Gyankunja EBS Dang</h4>
+                <p>Excellence • Beyond • Standards</p>
+                <p style="margin-top:10px; font-size:0.85rem; color:#94a3b8;">
+                    Nurturing young minds from Pre-Nursery to Grade 12 with quality education, values, and innovation.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
             <div>
                 <h4>Quick Links</h4>
@@ -450,29 +908,147 @@
                 <a href="#">Lunch Menu</a>
                 <a href="#">Staff Directory</a>
                 <a href="#">Careers</a>
+                <a href="#">Privacy Policy</a>
             </div>
             <div>
-                <h4>For Parents</h4>
-                <a href="#">Parent Portal</a>
-                <a href="#">School Handbook</a>
-                <a href="#">Volunteer</a>
-                <a href="#">Transportation</a>
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt" style="color:#fcd34d; width:20px;"></i> Dang, Nepal</p>
+                <p><i class="fas fa-phone" style="color:#fcd34d; width:20px;"></i> +977-985-1234567</p>
+                <p><i class="fas fa-envelope" style="color:#fcd34d; width:20px;"></i> info@gyankunja.edu.np</p>
+                <p><i class="fas fa-clock" style="color:#fcd34d; width:20px;"></i> Mon-Fri: 7:00 AM – 4:00 PM</p>
             </div>
             <div>
-                <h4>Connect</h4>
-                <div class="social">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-youtube"></i>
-                </div>
-                <p style="margin-top: 10px;">Subscribe to our newsletter for updates.</p>
+                <h4>Location</h4>
+                <p style="font-size:0.85rem; color:#94a3b8;">
+                    Gyankunja EBS Dang<br />
+                    Dang District, Lumbini Province<br />
+                    Nepal
+                </p>
+                <a href="#" style="color:#2563eb; font-weight:600; text-decoration:none;">
+                    <i class="fas fa-map-pin"></i> Get Directions
+                </a>
             </div>
             <div class="copyright">
-                &copy; 2026 Bright Future School. All rights reserved.
+                &copy; 2026 <span>Gyankunja EBS Dang</span>. All rights reserved. | Designed with <i class="fas fa-heart" style="color:#ef4444;"></i> for education.
             </div>
         </div>
     </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== SLIDER =====
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slider .slide');
+        const dots = document.querySelectorAll('.slider-dots .dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+        }
+
+        function changeSlide(direction) {
+            let newIndex = currentSlide + direction;
+            if (newIndex < 0) newIndex = totalSlides - 1;
+            if (newIndex >= totalSlides) newIndex = 0;
+            showSlide(newIndex);
+        }
+
+        // Dot click
+        dots.forEach((dot) => {
+            dot.addEventListener('click', function() {
+                const index = parseInt(this.dataset.slide);
+                showSlide(index);
+            });
+        });
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        // Keyboard arrows
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // ===== NOTICE POPUP =====
+        function closePopup() {
+            document.getElementById('noticePopup').classList.remove('show');
+        }
+
+        function dismissNotice() {
+            // Set a cookie for 7 days
+            const now = new Date();
+            now.setTime(now.getTime() + (7 * 24 * 60 * 60 * 1000));
+            document.cookie = "noticeDismissed=true; expires=" + now.toUTCString() + "; path=/";
+            closePopup();
+        }
+
+        // Check if notice should show
+        function checkNotice() {
+            const dismissed = document.cookie.split('; ').some(row => row.startsWith('noticeDismissed=true'));
+            if (!dismissed) {
+                // Show popup after 2 seconds
+                setTimeout(() => {
+                    document.getElementById('noticePopup').classList.add('show');
+                }, 1500);
+            }
+        }
+
+        // Click outside popup to close
+        document.getElementById('noticePopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+
+        // ===== SMOOTH SCROLL FOR NAV LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== ACTIVE NAV LINK ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section, .hero-slider, .notice-shortcuts, .social-map');
+            const navLinks = document.querySelectorAll('.nav-links a:not(.btn-nav)');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id') || '';
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ===== INIT =====
+        // Show first slide
+        showSlide(0);
+        // Check notice popup
+        checkNotice();
+    </script>
 
 </body>
 </html>
