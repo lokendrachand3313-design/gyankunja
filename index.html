@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gyankunja EBS Dang | School</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        /* ===== RESET & BASE ===== */
+        /* ============================================================
+           RESET & BASE - Times New Roman everywhere
+           ============================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -19,211 +17,269 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: #1e293b;
-            background: #faf9f6;
-            line-height: 1.6;
+            font-family: 'Times New Roman', Times, serif;
+            color: #2c2c2c;
+            background: #f7f5f0;
+            line-height: 1.7;
+            font-size: 17px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 30px;
         }
 
-        /* ===== TOP BAR ===== */
-        .top-bar {
-            background: #0f172a;
-            color: #e2e8f0;
-            padding: 8px 0;
-            font-size: 0.8rem;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
+
+        /* ============================================================
+           TOP BAR - Classic school style
+           ============================================================ */
+        .top-bar {
+            background: #1a1a1a;
+            color: #d4d0c8;
+            padding: 6px 0;
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 0.3px;
+            border-bottom: 3px solid #b8860b;
+        }
+
         .top-bar .container {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 6px;
-        }
-        .top-bar a {
-            color: #e2e8f0;
-            text-decoration: none;
-            margin-right: 18px;
-        }
-        .top-bar a:hover {
-            color: #fcd34d;
-        }
-        .top-bar i {
-            margin-right: 6px;
-            color: #fcd34d;
+            gap: 4px;
         }
 
-        /* ===== NAVIGATION ===== */
+        .top-bar a {
+            color: #d4d0c8;
+            margin-right: 20px;
+            transition: color 0.2s;
+        }
+
+        .top-bar a:hover {
+            color: #d4a017;
+        }
+
+        .top-bar i {
+            margin-right: 6px;
+            color: #d4a017;
+        }
+
+        /* ============================================================
+           NAVIGATION - Clean, traditional
+           ============================================================ */
         nav {
             background: #ffffff;
-            padding: 12px 0;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            padding: 14px 0;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid #e8e4dc;
             position: sticky;
             top: 0;
             z-index: 999;
         }
+
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
         }
+
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             text-decoration: none;
         }
+
         .logo img {
-            height: 55px;
+            height: 58px;
             width: auto;
-            border-radius: 8px;
+            border-radius: 4px;
+            border: 2px solid #d4a017;
+            padding: 2px;
+            background: #fff;
         }
+
         .logo-text {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #0f172a;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
             line-height: 1.2;
+            letter-spacing: 0.5px;
         }
+
         .logo-text span {
-            color: #2563eb;
             display: block;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: #64748b;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #8a7a5a;
+            text-transform: uppercase;
+            font-style: italic;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 8px;
             list-style: none;
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
             flex-wrap: wrap;
         }
+
         .nav-links a {
             text-decoration: none;
-            color: #1e293b;
-            transition: 0.3s;
-            padding: 6px 0;
-            border-bottom: 3px solid transparent;
+            color: #2c2c2c;
+            padding: 6px 16px;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+            letter-spacing: 0.3px;
         }
+
         .nav-links a:hover,
         .nav-links a.active {
-            color: #2563eb;
-            border-bottom-color: #2563eb;
+            color: #b8860b;
+            border-bottom-color: #b8860b;
         }
+
         .nav-links .btn-nav {
-            background: #2563eb;
+            background: #b8860b;
             color: #fff !important;
-            padding: 8px 24px;
-            border-radius: 40px;
-            font-weight: 700;
+            padding: 8px 26px;
+            border-radius: 4px;
             border-bottom: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
+
         .nav-links .btn-nav:hover {
-            background: #1d4ed8;
-            transform: scale(1.03);
+            background: #a0760a;
             border-bottom: none;
         }
 
-        /* ===== HERO SLIDER ===== */
+        /* ============================================================
+           HERO SLIDER - Classic, warm, human
+           ============================================================ */
         .hero-slider {
             position: relative;
             width: 100%;
-            height: 500px;
+            height: 480px;
             overflow: hidden;
-            background: #0f172a;
+            background: #1a1a1a;
         }
+
         .hero-slider .slide {
             position: absolute;
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 1s ease;
+            transition: opacity 1.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             text-align: center;
             padding: 40px;
             background-size: cover;
             background-position: center;
         }
+
         .hero-slider .slide.active {
             opacity: 1;
         }
+
         .hero-slider .slide::before {
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(15, 23, 42, 0.5);
+            background: rgba(20, 20, 20, 0.55);
         }
+
         .hero-slider .slide-content {
             position: relative;
             z-index: 2;
-            max-width: 700px;
+            max-width: 720px;
         }
+
         .hero-slider .slide-content h1 {
-            font-size: 3.2rem;
-            font-weight: 900;
-            margin-bottom: 16px;
-        }
-        .hero-slider .slide-content h1 span {
-            color: #fcd34d;
-        }
-        .hero-slider .slide-content p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 24px;
-        }
-        .hero-slider .slide-content .btn-slide {
-            background: #fcd34d;
-            color: #0f172a;
-            padding: 12px 36px;
-            border-radius: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 44px;
             font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-slider .slide-content h1 span {
+            color: #d4a017;
+        }
+
+        .hero-slider .slide-content p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 19px;
+            color: #e8e4dc;
+            margin-bottom: 24px;
+            font-style: italic;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-slider .slide-content .btn-slide {
+            background: #d4a017;
+            color: #1a1a1a;
+            padding: 12px 38px;
+            border-radius: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 17px;
             text-decoration: none;
             display: inline-block;
-            transition: 0.3s;
+            transition: 0.25s;
+            letter-spacing: 0.5px;
+            border: 1px solid #b8860b;
         }
+
         .hero-slider .slide-content .btn-slide:hover {
-            background: #fbbf24;
-            transform: translateY(-3px);
+            background: #b8860b;
+            color: #fff;
+            border-color: #a0760a;
         }
 
         /* Slider dots */
         .slider-dots {
             position: absolute;
-            bottom: 20px;
+            bottom: 24px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 10px;
+            gap: 12px;
             z-index: 10;
         }
+
         .slider-dots .dot {
-            width: 14px;
-            height: 14px;
+            width: 13px;
+            height: 13px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.3);
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.25s;
             border: 2px solid transparent;
         }
+
         .slider-dots .dot.active {
-            background: #fcd34d;
-            border-color: white;
-            transform: scale(1.2);
+            background: #d4a017;
+            border-color: #fff;
         }
+
         .slider-dots .dot:hover {
-            background: #fcd34d;
+            background: #d4a017;
         }
 
         /* Slider arrows */
@@ -231,19 +287,23 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: none;
-            padding: 16px 22px;
-            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 14px 20px;
+            font-size: 22px;
             cursor: pointer;
             z-index: 10;
-            border-radius: 50%;
-            transition: 0.3s;
+            border-radius: 4px;
+            transition: 0.25s;
+            font-family: 'Times New Roman', Times, serif;
         }
+
         .slider-arrow:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(212, 160, 23, 0.3);
+            border-color: #d4a017;
         }
+
         .slider-arrow.prev {
             left: 20px;
         }
@@ -251,37 +311,42 @@
             right: 20px;
         }
 
-        /* ===== NOTICE POPUP ===== */
+        /* ============================================================
+           NOTICE POPUP - Elegant and classic
+           ============================================================ */
         .notice-popup {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.65);
             display: none;
             align-items: center;
             justify-content: center;
             z-index: 9999;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(3px);
         }
+
         .notice-popup.show {
             display: flex;
         }
+
         .notice-popup .popup-box {
-            background: white;
-            max-width: 520px;
+            background: #fcfaf7;
+            max-width: 500px;
             width: 92%;
-            border-radius: 20px;
-            padding: 40px 35px 30px;
+            border-radius: 6px;
+            padding: 38px 34px 30px;
             position: relative;
-            animation: popIn 0.4s ease;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-            border-top: 8px solid #fcd34d;
+            animation: popIn 0.5s ease;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+            border-top: 6px solid #d4a017;
         }
+
         @keyframes popIn {
             from {
-                transform: scale(0.8) translateY(40px);
+                transform: scale(0.92) translateY(30px);
                 opacity: 0;
             }
             to {
@@ -289,406 +354,662 @@
                 opacity: 1;
             }
         }
+
         .notice-popup .popup-box .close-popup {
             position: absolute;
-            top: 12px;
-            right: 18px;
-            font-size: 1.8rem;
-            color: #94a3b8;
+            top: 10px;
+            right: 16px;
+            font-size: 28px;
+            color: #9a8a7a;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.2s;
             background: none;
             border: none;
+            font-family: 'Times New Roman', Times, serif;
         }
+
         .notice-popup .popup-box .close-popup:hover {
-            color: #ef4444;
+            color: #b22222;
             transform: rotate(90deg);
         }
+
         .notice-popup .popup-box .popup-icon {
-            font-size: 3rem;
-            color: #fcd34d;
-            margin-bottom: 8px;
-        }
-        .notice-popup .popup-box h2 {
-            font-size: 1.6rem;
-            font-weight: 800;
+            font-size: 32px;
+            color: #d4a017;
             margin-bottom: 6px;
-            color: #0f172a;
         }
-        .notice-popup .popup-box .popup-date {
-            font-size: 0.8rem;
-            color: #64748b;
-            margin-bottom: 12px;
-        }
-        .notice-popup .popup-box p {
-            color: #475569;
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-        .notice-popup .popup-box .popup-btn {
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 10px 32px;
-            border-radius: 40px;
+
+        .notice-popup .popup-box h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
             font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+
+        .notice-popup .popup-box .popup-date {
+            font-size: 14px;
+            color: #8a7a5a;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .notice-popup .popup-box p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #3c3c3c;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .notice-popup .popup-box .popup-btn {
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 10px 34px;
+            border-radius: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 16px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.25s;
+            letter-spacing: 0.5px;
         }
+
         .notice-popup .popup-box .popup-btn:hover {
-            background: #1d4ed8;
+            background: #b8860b;
         }
+
         .notice-popup .popup-box .dismiss-text {
             display: block;
             margin-top: 12px;
-            font-size: 0.75rem;
-            color: #94a3b8;
+            font-size: 13px;
+            color: #9a8a7a;
             cursor: pointer;
             text-decoration: underline;
-        }
-        .notice-popup .popup-box .dismiss-text:hover {
-            color: #475569;
+            font-style: italic;
         }
 
-        /* ===== MESSAGE SECTION ===== */
+        .notice-popup .popup-box .dismiss-text:hover {
+            color: #5a4a3a;
+        }
+
+        /* ============================================================
+           MESSAGE SECTION - Human, warm, personal
+           ============================================================ */
         .messages {
-            padding: 70px 0;
-            background: #ffffff;
+            padding: 60px 0 70px;
+            background: #fcfaf7;
+            border-bottom: 1px solid #e8e4dc;
         }
-        .messages h2 {
+
+        .messages .section-header {
             text-align: center;
-            font-size: 2.3rem;
-            font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 44px;
         }
-        .messages .subtitle {
-            text-align: center;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto 50px auto;
+
+        .messages .section-header h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
         }
+
+        .messages .section-header h2 i {
+            color: #d4a017;
+            margin-right: 8px;
+        }
+
+        .messages .section-header p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            color: #7a6a5a;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
         .message-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
+            gap: 32px;
         }
+
         .message-card {
-            background: #f8fafc;
-            border-radius: 20px;
-            padding: 30px 24px;
+            background: #f7f5f0;
+            border-radius: 6px;
+            padding: 32px 26px 28px;
             text-align: center;
-            border: 1px solid #e2e8f0;
-            transition: 0.3s;
+            border: 1px solid #e8e4dc;
+            transition: 0.25s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
         }
+
         .message-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+            border-color: #d4a017;
         }
-        .message-card .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 16px;
-            border: 4px solid #fcd34d;
-            display: block;
-            background: #dbeafe;
-        }
+
         .message-card .avatar-placeholder {
-            width: 100px;
-            height: 100px;
+            width: 96px;
+            height: 96px;
             border-radius: 50%;
-            margin: 0 auto 16px;
+            margin: 0 auto 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.5rem;
-            background: #dbeafe;
-            color: #2563eb;
-            border: 4px solid #fcd34d;
-        }
-        .message-card h4 {
-            font-size: 1.15rem;
-            font-weight: 800;
-        }
-        .message-card .title {
-            color: #2563eb;
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 8px;
-        }
-        .message-card p {
-            color: #475569;
-            font-size: 0.92rem;
-            font-style: italic;
-        }
-        .message-card .quote-icon {
-            color: #fcd34d;
-            font-size: 1.8rem;
-            opacity: 0.4;
-            margin-bottom: 4px;
+            font-size: 40px;
+            background: #e8e4dc;
+            color: #5a4a3a;
+            border: 3px solid #d4a017;
         }
 
-        /* ===== NOTICE SHORTCUTS ===== */
+        .message-card h4 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .message-card .title {
+            color: #b8860b;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .message-card .quote-icon {
+            color: #d4a017;
+            font-size: 28px;
+            opacity: 0.3;
+            margin-bottom: 2px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .message-card p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #4a4a4a;
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           NOTICE SHORTCUTS
+           ============================================================ */
         .notice-shortcuts {
-            padding: 50px 0;
-            background: #f1f5f9;
+            padding: 56px 0 60px;
+            background: #f7f5f0;
+            border-bottom: 1px solid #e8e4dc;
         }
-        .notice-shortcuts h2 {
+
+        .notice-shortcuts .section-header {
             text-align: center;
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
-        .notice-shortcuts .subtitle {
-            text-align: center;
-            color: #64748b;
             margin-bottom: 40px;
         }
-        .notice-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        .notice-item {
-            background: white;
-            padding: 22px 24px;
-            border-radius: 16px;
-            border-left: 6px solid #fcd34d;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-            transition: 0.3s;
-        }
-        .notice-item:hover {
-            transform: translateX(6px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-        }
-        .notice-item .n-date {
-            font-size: 0.75rem;
-            color: #94a3b8;
-            font-weight: 600;
-        }
-        .notice-item h4 {
-            font-size: 1.05rem;
-            margin: 4px 0 6px;
-        }
-        .notice-item p {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-        .notice-item .n-tag {
-            display: inline-block;
-            background: #dbeafe;
-            color: #1e40af;
-            font-size: 0.7rem;
+
+        .notice-shortcuts .section-header h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
             font-weight: 700;
-            padding: 2px 12px;
-            border-radius: 30px;
-            margin-top: 8px;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
         }
 
-        /* ===== FACEBOOK & MAP SECTION ===== */
-        .social-map {
-            padding: 60px 0;
-            background: #ffffff;
+        .notice-shortcuts .section-header p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            color: #7a6a5a;
+            font-style: italic;
+            margin-top: 4px;
         }
+
+        .notice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 24px;
+        }
+
+        .notice-item {
+            background: #fcfaf7;
+            padding: 22px 26px;
+            border-radius: 4px;
+            border-left: 5px solid #d4a017;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+            transition: 0.25s;
+            border: 1px solid #e8e4dc;
+            border-left-width: 5px;
+        }
+
+        .notice-item:hover {
+            transform: translateX(6px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .notice-item .n-date {
+            font-size: 13px;
+            color: #9a8a7a;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .notice-item h4 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            margin: 4px 0 6px;
+            color: #1a1a1a;
+        }
+
+        .notice-item p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #6a5a4a;
+            font-size: 15px;
+        }
+
+        .notice-item .n-tag {
+            display: inline-block;
+            background: #e8e4dc;
+            color: #5a4a3a;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 2px 14px;
+            border-radius: 3px;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .notice-item .n-tag.important {
+            background: #1a1a1a;
+            color: #f7f5f0;
+        }
+
+        .notice-item .n-tag.event {
+            background: #d4a017;
+            color: #1a1a1a;
+        }
+
+        .notice-item .n-tag.meeting {
+            background: #b8860b;
+            color: #fff;
+        }
+
+        .notice-item .n-tag.cultural {
+            background: #8a7a5a;
+            color: #fff;
+        }
+
+        .view-all-link {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .view-all-link a {
+            font-family: 'Times New Roman', Times, serif;
+            color: #b8860b;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            border-bottom: 2px solid #d4a017;
+            padding-bottom: 2px;
+            transition: 0.2s;
+        }
+
+        .view-all-link a:hover {
+            color: #8a6a0a;
+            border-bottom-color: #8a6a0a;
+        }
+
+        /* ============================================================
+           FACEBOOK & MAP - 50/50 ROW
+           ============================================================ */
+        .social-map {
+            padding: 56px 0 60px;
+            background: #fcfaf7;
+            border-bottom: 1px solid #e8e4dc;
+        }
+
         .social-map .container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            grid-template-columns: 1fr 1fr;  /* 50/50 split */
+            gap: 30px;
+            align-items: stretch;
         }
+
         .social-map .box {
-            border-radius: 16px;
+            border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e8e4dc;
+            background: #fcfaf7;
+            display: flex;
+            flex-direction: column;
         }
+
         .social-map .box .box-header {
-            background: #0f172a;
-            color: white;
-            padding: 14px 20px;
+            background: #1a1a1a;
+            color: #f7f5f0;
+            padding: 12px 20px;
+            font-family: 'Times New Roman', Times, serif;
             font-weight: 700;
+            font-size: 17px;
             display: flex;
             align-items: center;
             gap: 10px;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
         }
+
         .social-map .box .box-header i {
-            font-size: 1.4rem;
-            color: #fcd34d;
+            font-size: 22px;
+            color: #d4a017;
         }
+
         .social-map .box iframe {
             width: 100%;
-            height: 300px;
+            height: 100%;
+            min-height: 300px;
             border: 0;
             display: block;
+            flex: 1;
         }
+
         .social-map .fb-page-container {
-            padding: 16px;
-            background: #f8fafc;
+            padding: 20px;
+            background: #f7f5f0;
             min-height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        .social-map .fb-page-container .fb-placeholder {
             text-align: center;
-            color: #94a3b8;
-        }
-        .social-map .fb-page-container .fb-placeholder i {
-            font-size: 4rem;
-            color: #1877f2;
-            margin-bottom: 12px;
+            flex: 1;
         }
 
-        /* ===== FOOTER ===== */
-        footer {
-            background: #0f172a;
-            color: #e2e8f0;
-            padding: 50px 0 20px;
+        .social-map .fb-page-container .fb-placeholder i {
+            font-size: 52px;
+            color: #1877f2;
+            margin-bottom: 10px;
         }
+
+        .social-map .fb-page-container .fb-placeholder h4 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .social-map .fb-page-container .fb-placeholder p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #7a6a5a;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .social-map .fb-page-container .fb-placeholder .fb-btn {
+            display: inline-block;
+            margin-top: 14px;
+            background: #1877f2;
+            color: #fff;
+            padding: 10px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 16px;
+            transition: 0.2s;
+            border: 1px solid #0d6bd0;
+        }
+
+        .social-map .fb-page-container .fb-placeholder .fb-btn:hover {
+            background: #0d6bd0;
+        }
+
+        /* ============================================================
+           FOOTER - Classic, grounded
+           ============================================================ */
+        footer {
+            background: #1a1a1a;
+            color: #d4d0c8;
+            padding: 48px 0 20px;
+        }
+
         footer .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
-        footer h4 {
-            color: white;
-            margin-bottom: 16px;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-        footer h4 i {
-            color: #fcd34d;
-            margin-right: 8px;
-        }
-        footer p,
-        footer a {
-            color: #94a3b8;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-        footer a:hover {
-            color: #fcd34d;
-            padding-left: 4px;
-        }
-        footer .social-icons {
-            display: flex;
-            gap: 14px;
-            margin-top: 8px;
-        }
-        footer .social-icons a {
-            display: inline-block;
-            font-size: 1.5rem;
-            color: #94a3b8;
-            transition: 0.3s;
-        }
-        footer .social-icons a:hover {
-            color: #fcd34d;
-            transform: translateY(-3px);
-            padding-left: 0;
-        }
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #1e293b;
-            margin-top: 30px;
-            color: #64748b;
-            font-size: 0.85rem;
-            grid-column: 1 / -1;
-        }
-        .copyright span {
-            color: #fcd34d;
+            gap: 36px;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 992px) {
+        footer h4 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #f7f5f0;
+            margin-bottom: 14px;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        footer h4 i {
+            color: #d4a017;
+            margin-right: 8px;
+        }
+
+        footer p,
+        footer a {
+            font-family: 'Times New Roman', Times, serif;
+            color: #b0a898;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        footer a:hover {
+            color: #d4a017;
+            padding-left: 4px;
+        }
+
+        footer .social-icons {
+            display: flex;
+            gap: 16px;
+            margin-top: 6px;
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            font-size: 22px;
+            color: #b0a898;
+            transition: 0.2s;
+        }
+
+        footer .social-icons a:hover {
+            color: #d4a017;
+            transform: translateY(-2px);
+            padding-left: 0;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 28px;
+            border-top: 1px solid #3a3a3a;
+            margin-top: 28px;
+            color: #7a6a5a;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            grid-column: 1 / -1;
+            letter-spacing: 0.5px;
+        }
+
+        .copyright span {
+            color: #d4a017;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 768px) {
+            /* On tablets, keep 50/50 but stack on small screens */
             .social-map .container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
             }
         }
-        @media (max-width: 768px) {
+
+        @media (max-width: 600px) {
+            /* On mobile, stack vertically */
+            .social-map .container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
             .hero-slider {
-                height: 380px;
+                height: 360px;
             }
+
             .hero-slider .slide-content h1 {
-                font-size: 2rem;
+                font-size: 30px;
             }
+
             .hero-slider .slide-content p {
-                font-size: 1rem;
+                font-size: 16px;
             }
+
             .slider-arrow {
-                padding: 10px 16px;
-                font-size: 1.1rem;
+                padding: 10px 14px;
+                font-size: 18px;
             }
+
             .nav-links {
-                gap: 14px;
-                font-size: 0.8rem;
-                margin-top: 10px;
+                gap: 4px;
+                font-size: 14px;
+                margin-top: 8px;
+                justify-content: center;
             }
+
+            .nav-links a {
+                padding: 4px 12px;
+            }
+
             .logo img {
-                height: 40px;
+                height: 44px;
             }
+
             .logo-text {
-                font-size: 1.1rem;
+                font-size: 20px;
             }
+
+            .logo-text span {
+                font-size: 10px;
+            }
+
             .top-bar .container {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                font-size: 13px;
             }
+
             .message-grid {
                 grid-template-columns: 1fr;
                 max-width: 400px;
                 margin: 0 auto;
             }
+
+            .notice-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .slider-arrow.prev {
+                left: 8px;
+            }
+            .slider-arrow.next {
+                right: 8px;
+            }
+
+            .social-map .box iframe {
+                min-height: 220px;
+            }
+
+            .social-map .fb-page-container {
+                min-height: 220px;
+            }
         }
+
         @media (max-width: 480px) {
             .hero-slider {
-                height: 320px;
+                height: 300px;
             }
+
             .hero-slider .slide-content h1 {
-                font-size: 1.5rem;
+                font-size: 22px;
             }
+
+            .hero-slider .slide-content p {
+                font-size: 14px;
+            }
+
             .slider-arrow {
                 display: none;
             }
+
             .notice-popup .popup-box {
-                padding: 30px 20px 24px;
+                padding: 28px 20px 22px;
             }
+
             .notice-popup .popup-box h2 {
-                font-size: 1.2rem;
+                font-size: 20px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            footer .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            footer .social-icons {
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== TOP BAR ===== -->
+    <!-- ============================================================
+    TOP BAR
+    ============================================================ -->
     <div class="top-bar">
         <div class="container">
             <div>
                 <i class="fas fa-phone-alt"></i> +977-985-1234567
-                <i class="fas fa-envelope" style="margin-left: 16px;"></i> info@gyankunja.edu.np
+                <i class="fas fa-envelope" style="margin-left:16px;"></i> info@gyankunja.edu.np
             </div>
             <div>
                 <a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a>
                 <a href="#"><i class="fas fa-user-graduate"></i> Parent Portal</a>
-                <a href="#"><i class="fas fa-facebook"></i> Follow Us</a>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
             </div>
         </div>
     </div>
 
-    <!-- ===== NAVIGATION ===== -->
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
     <nav>
         <div class="container">
             <a href="#" class="logo">
                 <!-- Replace 'logo.png' with your actual logo file -->
-                <img src="https://via.placeholder.com/60x60/0f172a/fcd34d?text=GY" alt="Gyankunja Logo" />
+                <img src="https://via.placeholder.com/60x60/1a1a1a/d4a017?text=GY" alt="Gyankunja Logo" />
                 <div class="logo-text">
                     Gyankunja EBS Dang
-                    <span>Excellence • Beyond • Standards</span>
+                    <span>Excellence · Beyond · Standards</span>
                 </div>
             </a>
             <ul class="nav-links">
@@ -703,8 +1024,11 @@
         </div>
     </nav>
 
-    <!-- ===== HERO SLIDER ===== -->
+    <!-- ============================================================
+    HERO SLIDER
+    ============================================================ -->
     <div class="hero-slider" id="home">
+
         <!-- Slide 1 -->
         <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=500&fit=crop');">
             <div class="slide-content">
@@ -713,6 +1037,7 @@
                 <a href="#" class="btn-slide">Explore Our School</a>
             </div>
         </div>
+
         <!-- Slide 2 -->
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=500&fit=crop');">
             <div class="slide-content">
@@ -721,6 +1046,7 @@
                 <a href="#" class="btn-slide">Take a Tour</a>
             </div>
         </div>
+
         <!-- Slide 3 -->
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1200&h=500&fit=crop');">
             <div class="slide-content">
@@ -729,6 +1055,7 @@
                 <a href="#" class="btn-slide">Learn More</a>
             </div>
         </div>
+
         <!-- Slide 4 -->
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1200&h=500&fit=crop');">
             <div class="slide-content">
@@ -747,20 +1074,22 @@
         </div>
 
         <!-- Arrows -->
-        <button class="slider-arrow prev" onclick="changeSlide(-1)">❮</button>
-        <button class="slider-arrow next" onclick="changeSlide(1)">❯</button>
+        <button class="slider-arrow prev" onclick="changeSlide(-1)">‹</button>
+        <button class="slider-arrow next" onclick="changeSlide(1)">›</button>
     </div>
 
-    <!-- ===== NOTICE POPUP ===== -->
+    <!-- ============================================================
+    NOTICE POPUP
+    ============================================================ -->
     <div class="notice-popup" id="noticePopup">
         <div class="popup-box">
             <button class="close-popup" onclick="closePopup()">✕</button>
             <div class="popup-icon">📢</div>
-            <h2>📌 Important Notice</h2>
+            <h2>Important Notice</h2>
             <div class="popup-date"><i class="far fa-calendar-alt"></i> Updated: July 15, 2026</div>
             <p>
-                <strong>Admissions Open for Academic Year 2026-27!</strong><br /><br />
-                We are now accepting applications for Pre-Nursery to Grade 12. 
+                <strong>Admissions Open for Academic Year 2026–27!</strong><br /><br />
+                We are now accepting applications for Pre-Nursery to Grade 12.
                 Limited seats available. <strong>Early bird discount</strong> for applications submitted before August 10.
                 <br /><br />
                 📞 Call us at +977-985-1234567 for inquiries.
@@ -770,85 +1099,99 @@
         </div>
     </div>
 
-    <!-- ===== MESSAGE SECTION ===== -->
+    <!-- ============================================================
+    MESSAGE SECTION
+    ============================================================ -->
     <section class="messages" id="about">
         <div class="container">
-            <h2>💬 Messages from Our Leaders</h2>
-            <p class="subtitle">Words of inspiration from the visionaries who guide Gyankunja EBS Dang.</p>
+            <div class="section-header">
+                <h2><i class="fas fa-quote-left"></i> Messages from Our Leaders</h2>
+                <p>Words of inspiration from those who guide Gyankunja EBS Dang</p>
+            </div>
+
             <div class="message-grid">
                 <!-- Principal -->
                 <div class="message-card">
                     <div class="avatar-placeholder">👩‍🏫</div>
-                    <!-- Replace src with actual photo -->
-                    <img src="https://via.placeholder.com/100x100/2563eb/white?text=Principal" alt="Principal" class="avatar" style="display:none;" />
                     <h4>Mrs. Sunita Sharma</h4>
                     <div class="title">Principal</div>
-                    <div class="quote-icon">"</div>
+                    <div class="quote-icon">❝</div>
                     <p>"At Gyankunja, we believe every child is a seed with infinite potential. Our role is to provide the right soil, sunlight, and water for them to grow into magnificent trees."</p>
                 </div>
+
                 <!-- HOD -->
                 <div class="message-card">
                     <div class="avatar-placeholder">👨‍🏫</div>
                     <h4>Mr. Ram Prasad Adhikari</h4>
-                    <div class="title">Head of Academics (HOD)</div>
-                    <div class="quote-icon">"</div>
+                    <div class="title">Head of Academics</div>
+                    <div class="quote-icon">❝</div>
                     <p>"Academic excellence is not just about grades — it's about nurturing curiosity, critical thinking, and a lifelong love for learning. Our curriculum is designed to inspire."</p>
                 </div>
+
                 <!-- President -->
                 <div class="message-card">
                     <div class="avatar-placeholder">👨‍💼</div>
                     <h4>Mr. Krishna Bahadur Thapa</h4>
                     <div class="title">President, EBS Dang</div>
-                    <div class="quote-icon">"</div>
+                    <div class="quote-icon">❝</div>
                     <p>"Education is the most powerful weapon to change the world. Gyankunja EBS Dang is committed to producing not just graduates, but responsible global citizens and future leaders."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== NOTICE SHORTCUTS ===== -->
+    <!-- ============================================================
+    NOTICE SHORTCUTS
+    ============================================================ -->
     <section class="notice-shortcuts" id="notices">
         <div class="container">
-            <h2>📋 Latest Notices</h2>
-            <p class="subtitle">Stay updated with important announcements and events.</p>
+            <div class="section-header">
+                <h2><i class="fas fa-bullhorn"></i> Latest Notices</h2>
+                <p>Stay updated with important announcements and events</p>
+            </div>
+
             <div class="notice-grid">
                 <div class="notice-item">
                     <div class="n-date"><i class="far fa-calendar-alt"></i> July 15, 2026</div>
-                    <h4>📢 Admissions Open 2026-27</h4>
+                    <h4>Admissions Open 2026–27</h4>
                     <p>Applications are now being accepted for all grades. Early bird discount available.</p>
-                    <span class="n-tag">Important</span>
+                    <span class="n-tag important">Important</span>
                 </div>
-                <div class="notice-item" style="border-left-color:#2563eb;">
+
+                <div class="notice-item">
                     <div class="n-date"><i class="far fa-calendar-alt"></i> July 12, 2026</div>
-                    <h4>🏆 Annual Sports Day</h4>
+                    <h4>Annual Sports Day</h4>
                     <p>Save the date! Our annual sports day will be held on August 25. All students invited.</p>
-                    <span class="n-tag" style="background:#fef3c7; color:#b45309;">Event</span>
+                    <span class="n-tag event">Event</span>
                 </div>
-                <div class="notice-item" style="border-left-color:#10b981;">
+
+                <div class="notice-item">
                     <div class="n-date"><i class="far fa-calendar-alt"></i> July 10, 2026</div>
-                    <h4>📚 Parent-Teacher Meeting</h4>
-                    <p>PTM for Grades 6-12 on July 30. Progress reports will be distributed.</p>
-                    <span class="n-tag" style="background:#d1fae5; color:#065f46;">Meeting</span>
+                    <h4>Parent–Teacher Meeting</h4>
+                    <p>PTM for Grades 6–12 on July 30. Progress reports will be distributed.</p>
+                    <span class="n-tag meeting">Meeting</span>
                 </div>
-                <div class="notice-item" style="border-left-color:#8b5cf6;">
+
+                <div class="notice-item">
                     <div class="n-date"><i class="far fa-calendar-alt"></i> July 8, 2026</div>
-                    <h4>🎨 Art Exhibition</h4>
-                    <p>Our students' artwork will be displayed at the City Hall on August 5-7.</p>
-                    <span class="n-tag" style="background:#ede9fe; color:#5b21b6;">Cultural</span>
+                    <h4>Art Exhibition</h4>
+                    <p>Our students' artwork will be displayed at the City Hall on August 5–7.</p>
+                    <span class="n-tag cultural">Cultural</span>
                 </div>
             </div>
-            <div style="text-align:center; margin-top:30px;">
-                <a href="#" style="color:#2563eb; font-weight:700; text-decoration:none;">
-                    View All Notices <i class="fas fa-arrow-right"></i>
-                </a>
+
+            <div class="view-all-link">
+                <a href="#">View All Notices →</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== FACEBOOK & MAP ===== -->
+    <!-- ============================================================
+    FACEBOOK & MAP - NOW 50/50 IN ONE ROW
+    ============================================================ -->
     <section class="social-map" id="contact">
         <div class="container">
-            <!-- Facebook Box -->
+            <!-- Facebook Box - Left 50% -->
             <div class="box">
                 <div class="box-header">
                     <i class="fab fa-facebook"></i> Follow Us on Facebook
@@ -857,19 +1200,14 @@
                     <div class="fb-placeholder">
                         <i class="fab fa-facebook"></i>
                         <h4>Gyankunja EBS Dang</h4>
-                        <p>Connect with us on Facebook for daily updates, photos, and events.</p>
-                        <a href="#" style="display:inline-block; margin-top:12px; background:#1877f2; color:white; padding:10px 30px; border-radius:40px; text-decoration:none; font-weight:700;">
-                            <i class="fab fa-facebook"></i> Visit Our Page
-                        </a>
-                        <!-- Replace the href above with your actual Facebook page URL -->
-                        <!-- For actual Facebook Page Plugin, replace the div below with:
-                        <div class="fb-page" data-href="https://www.facebook.com/yourpage" data-tabs="timeline" data-width="100%" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-                        -->
+                        <p>Connect with us for daily updates, photos, and events.</p>
+                        <a href="#" class="fb-btn"><i class="fab fa-facebook"></i> Visit Our Page</a>
+                        <!-- Replace href with your actual Facebook page URL -->
                     </div>
                 </div>
             </div>
 
-            <!-- Google Map Box -->
+            <!-- Google Map Box - Right 50% -->
             <div class="box">
                 <div class="box-header">
                     <i class="fas fa-map-marker-alt"></i> Find Us Here
@@ -880,18 +1218,20 @@
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <!-- Replace the src above with your actual Google Maps embed URL -->
+                <!-- Replace src with your actual Google Maps embed URL -->
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
     <footer>
         <div class="container">
             <div>
                 <h4><i class="fas fa-graduation-cap"></i> Gyankunja EBS Dang</h4>
-                <p>Excellence • Beyond • Standards</p>
-                <p style="margin-top:10px; font-size:0.85rem; color:#94a3b8;">
+                <p>Excellence · Beyond · Standards</p>
+                <p style="margin-top:8px; font-size:14px; color:#8a7a5a;">
                     Nurturing young minds from Pre-Nursery to Grade 12 with quality education, values, and innovation.
                 </p>
                 <div class="social-icons">
@@ -901,6 +1241,7 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
+
             <div>
                 <h4>Quick Links</h4>
                 <a href="#">About Us</a>
@@ -910,31 +1251,37 @@
                 <a href="#">Careers</a>
                 <a href="#">Privacy Policy</a>
             </div>
+
             <div>
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-map-marker-alt" style="color:#fcd34d; width:20px;"></i> Dang, Nepal</p>
-                <p><i class="fas fa-phone" style="color:#fcd34d; width:20px;"></i> +977-985-1234567</p>
-                <p><i class="fas fa-envelope" style="color:#fcd34d; width:20px;"></i> info@gyankunja.edu.np</p>
-                <p><i class="fas fa-clock" style="color:#fcd34d; width:20px;"></i> Mon-Fri: 7:00 AM – 4:00 PM</p>
+                <p><i class="fas fa-map-marker-alt" style="color:#d4a017; width:20px;"></i> Dang, Nepal</p>
+                <p><i class="fas fa-phone" style="color:#d4a017; width:20px;"></i> +977-985-1234567</p>
+                <p><i class="fas fa-envelope" style="color:#d4a017; width:20px;"></i> info@gyankunja.edu.np</p>
+                <p><i class="fas fa-clock" style="color:#d4a017; width:20px;"></i> Mon–Fri: 7:00 AM – 4:00 PM</p>
             </div>
+
             <div>
                 <h4>Location</h4>
-                <p style="font-size:0.85rem; color:#94a3b8;">
+                <p style="font-size:14px; color:#8a7a5a;">
                     Gyankunja EBS Dang<br />
                     Dang District, Lumbini Province<br />
                     Nepal
                 </p>
-                <a href="#" style="color:#2563eb; font-weight:600; text-decoration:none;">
+                <a href="#" style="color:#b8860b; font-weight:700;">
                     <i class="fas fa-map-pin"></i> Get Directions
                 </a>
             </div>
+
             <div class="copyright">
-                &copy; 2026 <span>Gyankunja EBS Dang</span>. All rights reserved. | Designed with <i class="fas fa-heart" style="color:#ef4444;"></i> for education.
+                &copy; 2026 <span>Gyankunja EBS Dang</span>. All rights reserved. 
+                <span style="color:#7a6a5a; font-style:italic;">Designed with care for education.</span>
             </div>
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
     <script>
         // ===== SLIDER =====
         let currentSlide = 0;
@@ -959,20 +1306,14 @@
             showSlide(newIndex);
         }
 
-        // Dot click
         dots.forEach((dot) => {
             dot.addEventListener('click', function() {
-                const index = parseInt(this.dataset.slide);
-                showSlide(index);
+                showSlide(parseInt(this.dataset.slide));
             });
         });
 
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            changeSlide(1);
-        }, 5000);
+        setInterval(() => changeSlide(1), 5000);
 
-        // Keyboard arrows
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') changeSlide(-1);
             if (e.key === 'ArrowRight') changeSlide(1);
@@ -984,32 +1325,26 @@
         }
 
         function dismissNotice() {
-            // Set a cookie for 7 days
             const now = new Date();
             now.setTime(now.getTime() + (7 * 24 * 60 * 60 * 1000));
             document.cookie = "noticeDismissed=true; expires=" + now.toUTCString() + "; path=/";
             closePopup();
         }
 
-        // Check if notice should show
         function checkNotice() {
             const dismissed = document.cookie.split('; ').some(row => row.startsWith('noticeDismissed=true'));
             if (!dismissed) {
-                // Show popup after 2 seconds
                 setTimeout(() => {
                     document.getElementById('noticePopup').classList.add('show');
                 }, 1500);
             }
         }
 
-        // Click outside popup to close
         document.getElementById('noticePopup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePopup();
-            }
+            if (e.target === this) closePopup();
         });
 
-        // ===== SMOOTH SCROLL FOR NAV LINKS =====
+        // ===== SMOOTH SCROLL =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
@@ -1022,11 +1357,10 @@
             });
         });
 
-        // ===== ACTIVE NAV LINK ON SCROLL =====
+        // ===== ACTIVE NAV =====
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section, .hero-slider, .notice-shortcuts, .social-map');
             const navLinks = document.querySelectorAll('.nav-links a:not(.btn-nav)');
-
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 120;
@@ -1034,7 +1368,6 @@
                     current = section.getAttribute('id') || '';
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === '#' + current) {
@@ -1044,9 +1377,7 @@
         });
 
         // ===== INIT =====
-        // Show first slide
         showSlide(0);
-        // Check notice popup
         checkNotice();
     </script>
 
