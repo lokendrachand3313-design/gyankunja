@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gyankunja EBS Dang | School</title>
+    <title>Gyankunja English School · Ghorahi</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         /* ============================================================
-           RESET & BASE - Times New Roman everywhere
+           RESET & BASE - Times New Roman
            ============================================================ */
         * {
             margin: 0;
@@ -36,7 +36,7 @@
         }
 
         /* ============================================================
-           TOP BAR - Classic school style
+           TOP BAR
            ============================================================ */
         .top-bar {
             background: #1a1a1a;
@@ -71,7 +71,7 @@
         }
 
         /* ============================================================
-           NAVIGATION - Clean, traditional
+           NAVIGATION
            ============================================================ */
         nav {
             background: #ffffff;
@@ -166,7 +166,7 @@
         }
 
         /* ============================================================
-           HERO SLIDER - Classic, warm, human
+           HERO SLIDER
            ============================================================ */
         .hero-slider {
             position: relative;
@@ -252,7 +252,6 @@
             border-color: #a0760a;
         }
 
-        /* Slider dots */
         .slider-dots {
             position: absolute;
             bottom: 24px;
@@ -282,7 +281,6 @@
             background: #d4a017;
         }
 
-        /* Slider arrows */
         .slider-arrow {
             position: absolute;
             top: 50%;
@@ -312,7 +310,7 @@
         }
 
         /* ============================================================
-           NOTICE POPUP - Elegant and classic
+           NOTICE POPUP
            ============================================================ */
         .notice-popup {
             position: fixed;
@@ -436,7 +434,7 @@
         }
 
         /* ============================================================
-           MESSAGE SECTION - Human, warm, personal
+           MESSAGE SECTION
            ============================================================ */
         .messages {
             padding: 60px 0 70px;
@@ -664,111 +662,227 @@
         }
 
         /* ============================================================
-           FACEBOOK & MAP - 50/50 ROW
+           ABOUT US, ADMISSIONS, OUR TEAM, GALLERY, CONTACT SECTIONS
            ============================================================ */
-        .social-map {
+        .info-section {
             padding: 56px 0 60px;
             background: #fcfaf7;
             border-bottom: 1px solid #e8e4dc;
         }
 
-        .social-map .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;  /* 50/50 split */
-            gap: 30px;
-            align-items: stretch;
-        }
-
-        .social-map .box {
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
-            border: 1px solid #e8e4dc;
-            background: #fcfaf7;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .social-map .box .box-header {
-            background: #1a1a1a;
-            color: #f7f5f0;
-            padding: 12px 20px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 700;
-            font-size: 17px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            letter-spacing: 0.5px;
-            flex-shrink: 0;
-        }
-
-        .social-map .box .box-header i {
-            font-size: 22px;
-            color: #d4a017;
-        }
-
-        .social-map .box iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 300px;
-            border: 0;
-            display: block;
-            flex: 1;
-        }
-
-        .social-map .fb-page-container {
-            padding: 20px;
+        .info-section.alt {
             background: #f7f5f0;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex: 1;
         }
 
-        .social-map .fb-page-container .fb-placeholder i {
-            font-size: 52px;
-            color: #1877f2;
+        .info-section .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-section .section-header h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+
+        .info-section .section-header h2 i {
+            color: #d4a017;
+            margin-right: 8px;
+        }
+
+        .info-section .section-header p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            color: #7a6a5a;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: #ffffff;
+            padding: 28px 26px;
+            border-radius: 6px;
+            border: 1px solid #e8e4dc;
+            transition: 0.25s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            border-color: #d4a017;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-card .card-icon {
+            font-size: 36px;
+            color: #d4a017;
             margin-bottom: 10px;
         }
 
-        .social-map .fb-page-container .fb-placeholder h4 {
+        .info-card h4 {
             font-family: 'Times New Roman', Times, serif;
             font-size: 20px;
+            font-weight: 700;
             color: #1a1a1a;
             margin-bottom: 4px;
         }
 
-        .social-map .fb-page-container .fb-placeholder p {
+        .info-card p {
             font-family: 'Times New Roman', Times, serif;
-            color: #7a6a5a;
-            font-size: 15px;
-            font-style: italic;
+            color: #5a4a3a;
+            font-size: 16px;
+            line-height: 1.7;
         }
 
-        .social-map .fb-page-container .fb-placeholder .fb-btn {
-            display: inline-block;
-            margin-top: 14px;
-            background: #1877f2;
-            color: #fff;
-            padding: 10px 32px;
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 6px;
+        }
+
+        .info-card ul li {
+            font-family: 'Times New Roman', Times, serif;
+            color: #5a4a3a;
+            font-size: 15px;
+            padding: 3px 0;
+            border-bottom: 1px dotted #e8e4dc;
+        }
+
+        .info-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .info-card ul li i {
+            color: #d4a017;
+            width: 20px;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .gallery-item {
+            background: #e8e4dc;
             border-radius: 4px;
-            text-decoration: none;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #5a4a3a;
+            font-weight: 600;
+            border: 1px solid #d4c8b8;
+            transition: 0.25s;
+            background: #f7f5f0;
+            font-size: 15px;
+        }
+
+        .gallery-item i {
+            font-size: 38px;
+            color: #b8860b;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: #b8860b;
+            background: #fcfaf7;
+        }
+
+        /* Contact */
+        .contact-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .contact-info {
+            background: #ffffff;
+            padding: 30px 28px;
+            border-radius: 6px;
+            border: 1px solid #e8e4dc;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .contact-info i {
+            color: #d4a017;
+            width: 28px;
+            font-size: 18px;
+        }
+
+        .contact-form {
+            background: #ffffff;
+            padding: 30px 28px;
+            border-radius: 6px;
+            border: 1px solid #e8e4dc;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 16px;
+            margin: 6px 0 14px;
+            border: 1px solid #d4c8b8;
+            border-radius: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            background: #fcfaf7;
+            transition: 0.2s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #b8860b;
+            outline: none;
+            background: #fff;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background: #b8860b;
+            color: #fff;
+            border: none;
+            padding: 12px 36px;
+            border-radius: 4px;
             font-family: 'Times New Roman', Times, serif;
             font-weight: 700;
-            font-size: 16px;
-            transition: 0.2s;
-            border: 1px solid #0d6bd0;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.25s;
+            letter-spacing: 0.5px;
+            width: 100%;
         }
 
-        .social-map .fb-page-container .fb-placeholder .fb-btn:hover {
-            background: #0d6bd0;
+        .contact-form button:hover {
+            background: #a0760a;
         }
 
         /* ============================================================
-           FOOTER - Classic, grounded
+           FOOTER
            ============================================================ */
         footer {
             background: #1a1a1a;
@@ -851,35 +965,47 @@
            RESPONSIVE
            ============================================================ */
         @media (max-width: 768px) {
-            /* On tablets, keep 50/50 but stack on small screens */
-            .social-map .container {
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
+            .hero-slider {
+                height: 380px;
+            }
+
+            .hero-slider .slide-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-slider .slide-content p {
+                font-size: 17px;
+            }
+
+            .slider-arrow {
+                padding: 10px 16px;
+                font-size: 18px;
+            }
+
+            .contact-flex {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             }
         }
 
         @media (max-width: 600px) {
-            /* On mobile, stack vertically */
-            .social-map .container {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
             .hero-slider {
-                height: 360px;
+                height: 320px;
             }
 
             .hero-slider .slide-content h1 {
-                font-size: 30px;
+                font-size: 24px;
             }
 
             .hero-slider .slide-content p {
-                font-size: 16px;
+                font-size: 15px;
             }
 
             .slider-arrow {
-                padding: 10px 14px;
-                font-size: 18px;
+                display: none;
             }
 
             .nav-links {
@@ -890,7 +1016,7 @@
             }
 
             .nav-links a {
-                padding: 4px 12px;
+                padding: 4px 10px;
             }
 
             .logo img {
@@ -924,45 +1050,14 @@
                 margin: 0 auto;
             }
 
-            .slider-arrow.prev {
-                left: 8px;
-            }
-            .slider-arrow.next {
-                right: 8px;
-            }
-
-            .social-map .box iframe {
-                min-height: 220px;
+            .info-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
             }
 
-            .social-map .fb-page-container {
-                min-height: 220px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-slider {
-                height: 300px;
-            }
-
-            .hero-slider .slide-content h1 {
-                font-size: 22px;
-            }
-
-            .hero-slider .slide-content p {
-                font-size: 14px;
-            }
-
-            .slider-arrow {
-                display: none;
-            }
-
-            .notice-popup .popup-box {
-                padding: 28px 20px 22px;
-            }
-
-            .notice-popup .popup-box h2 {
-                font-size: 20px;
+            .contact-flex {
+                grid-template-columns: 1fr;
             }
 
             .container {
@@ -976,6 +1071,41 @@
 
             footer .social-icons {
                 justify-content: center;
+            }
+
+            .notice-popup .popup-box {
+                padding: 28px 20px 22px;
+            }
+
+            .notice-popup .popup-box h2 {
+                font-size: 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .gallery-item {
+                height: 130px;
+                font-size: 13px;
+            }
+
+            .gallery-item i {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 280px;
+            }
+
+            .hero-slider .slide-content h1 {
+                font-size: 20px;
+            }
+
+            .hero-slider .slide-content p {
+                font-size: 13px;
             }
         }
     </style>
@@ -1005,21 +1135,21 @@
     <nav>
         <div class="container">
             <a href="#" class="logo">
-                <!-- Replace 'logo.png' with your actual logo file -->
                 <img src="https://via.placeholder.com/60x60/1a1a1a/d4a017?text=GY" alt="Gyankunja Logo" />
                 <div class="logo-text">
-                    Gyankunja EBS Dang
-                    <span>Excellence · Beyond · Standards</span>
+                    Gyankunja English School
+                    <span>Ghorahi · Dang · Excellence</span>
                 </div>
             </a>
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#notices">Notices</a></li>
-                <li><a href="#programs">Programs</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#team">Our Team</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#staff">School Staff</a></li>
+                <li><a href="#notices">Notices</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#" class="btn-nav">Admissions</a></li>
+                <li><a href="#admissions" class="btn-nav">Apply Now</a></li>
             </ul>
         </div>
     </nav>
@@ -1028,44 +1158,39 @@
     HERO SLIDER
     ============================================================ -->
     <div class="hero-slider" id="home">
-
         <!-- Slide 1 -->
         <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=500&fit=crop');">
             <div class="slide-content">
-                <h1>Welcome to <span>Gyankunja EBS Dang</span></h1>
-                <p>Nurturing young minds from Pre-Nursery to Grade 12 with excellence and care.</p>
-                <a href="#" class="btn-slide">Explore Our School</a>
+                <h1>Welcome to <span>Gyankunja</span></h1>
+                <p>Nurturing young minds from Nursery to Grade 10 with excellence and care.</p>
+                <a href="#admissions" class="btn-slide">Admissions Open</a>
             </div>
         </div>
 
-        <!-- Slide 2 -->
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=500&fit=crop');">
             <div class="slide-content">
-                <h1>State-of-the-Art <span>Facilities</span></h1>
-                <p>Modern classrooms, science labs, sports grounds, and a vibrant learning environment.</p>
-                <a href="#" class="btn-slide">Take a Tour</a>
+                <h1>Modern <span>Facilities</span></h1>
+                <p>Well-equipped classrooms, science labs, library, and sports grounds.</p>
+                <a href="#gallery" class="btn-slide">Explore Campus</a>
             </div>
         </div>
 
-        <!-- Slide 3 -->
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1200&h=500&fit=crop');">
             <div class="slide-content">
                 <h1>Holistic <span>Education</span></h1>
                 <p>Academic excellence combined with arts, sports, and character development.</p>
-                <a href="#" class="btn-slide">Learn More</a>
+                <a href="#about" class="btn-slide">Learn More</a>
             </div>
         </div>
 
-        <!-- Slide 4 -->
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1200&h=500&fit=crop');">
             <div class="slide-content">
                 <h1>Our <span>Graduates</span> Shine</h1>
-                <p>Preparing students for top universities and successful careers worldwide.</p>
-                <a href="#" class="btn-slide">Alumni Stories</a>
+                <p>Preparing students for top institutions and successful careers.</p>
+                <a href="#team" class="btn-slide">Meet Our Team</a>
             </div>
         </div>
 
-        <!-- Dots -->
         <div class="slider-dots">
             <span class="dot active" data-slide="0"></span>
             <span class="dot" data-slide="1"></span>
@@ -1073,7 +1198,6 @@
             <span class="dot" data-slide="3"></span>
         </div>
 
-        <!-- Arrows -->
         <button class="slider-arrow prev" onclick="changeSlide(-1)">‹</button>
         <button class="slider-arrow next" onclick="changeSlide(1)">›</button>
     </div>
@@ -1089,7 +1213,7 @@
             <div class="popup-date"><i class="far fa-calendar-alt"></i> Updated: July 15, 2026</div>
             <p>
                 <strong>Admissions Open for Academic Year 2026–27!</strong><br /><br />
-                We are now accepting applications for Pre-Nursery to Grade 12.
+                We are now accepting applications for Nursery to Grade 10.
                 Limited seats available. <strong>Early bird discount</strong> for applications submitted before August 10.
                 <br /><br />
                 📞 Call us at +977-985-1234567 for inquiries.
@@ -1100,48 +1224,142 @@
     </div>
 
     <!-- ============================================================
-    MESSAGE SECTION
+    ABOUT US
     ============================================================ -->
-    <section class="messages" id="about">
+    <section class="info-section" id="about">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-quote-left"></i> Messages from Our Leaders</h2>
-                <p>Words of inspiration from those who guide Gyankunja EBS Dang</p>
+                <h2><i class="fas fa-info-circle"></i> About Us</h2>
+                <p>History · Mission · Vision · Values</p>
             </div>
-
-            <div class="message-grid">
-                <!-- Principal -->
-                <div class="message-card">
-                    <div class="avatar-placeholder">👩‍🏫</div>
-                    <h4>Mrs. Sunita Sharma</h4>
-                    <div class="title">Principal</div>
-                    <div class="quote-icon">❝</div>
-                    <p>"At Gyankunja, we believe every child is a seed with infinite potential. Our role is to provide the right soil, sunlight, and water for them to grow into magnificent trees."</p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-school"></i></div>
+                    <h4>Our School</h4>
+                    <p>Gyankunja English School is a private, co-educational institution located in Bakulahi, Ghorahi-9, Dang. We offer a strong academic foundation from Nursery to Grade 10, following the Nepal Government curriculum enriched with modern pedagogy.</p>
                 </div>
-
-                <!-- HOD -->
-                <div class="message-card">
-                    <div class="avatar-placeholder">👨‍🏫</div>
-                    <h4>Mr. Ram Prasad Adhikari</h4>
-                    <div class="title">Head of Academics</div>
-                    <div class="quote-icon">❝</div>
-                    <p>"Academic excellence is not just about grades — it's about nurturing curiosity, critical thinking, and a lifelong love for learning. Our curriculum is designed to inspire."</p>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Vision & Mission</h4>
+                    <p><strong>Vision:</strong> To empower young minds with knowledge, integrity, and compassion, shaping responsible global citizens rooted in Nepali values.</p>
+                    <p style="margin-top:8px;"><strong>Mission:</strong> To provide quality education that nurtures curiosity, critical thinking, and lifelong learning.</p>
                 </div>
-
-                <!-- President -->
-                <div class="message-card">
-                    <div class="avatar-placeholder">👨‍💼</div>
-                    <h4>Mr. Krishna Bahadur Thapa</h4>
-                    <div class="title">President, EBS Dang</div>
-                    <div class="quote-icon">❝</div>
-                    <p>"Education is the most powerful weapon to change the world. Gyankunja EBS Dang is committed to producing not just graduates, but responsible global citizens and future leaders."</p>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-heart"></i></div>
+                    <h4>Core Values</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Excellence</li>
+                        <li><i class="fas fa-check"></i> Integrity</li>
+                        <li><i class="fas fa-check"></i> Respect</li>
+                        <li><i class="fas fa-check"></i> Community</li>
+                        <li><i class="fas fa-check"></i> Curiosity</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================
-    NOTICE SHORTCUTS
+    ADMISSIONS
+    ============================================================ -->
+    <section class="info-section alt" id="admissions">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-door-open"></i> Admissions</h2>
+                <p>Apply · Tuition · Open House · Inquiry</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+                    <h4>Apply Online</h4>
+                    <p>Fill the application form or download it. Open House dates are announced every spring — come see us!</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h4>Tuition & Fees</h4>
+                    <p>Transparent fee structure with flexible payment plans. Scholarships available for meritorious students.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h4>Open House</h4>
+                    <p>Visit our campus, meet teachers, and explore our facilities. Next Open House: 2026 · TBA</p>
+                </div>
+            </div>
+            <div style="background:#e8e4dc; border-radius:4px; padding:16px 24px; margin-top:24px; text-align:center;">
+                <i class="fas fa-phone-alt" style="color:#b8860b; margin-right:10px;"></i>
+                <strong>+977-985-1234567</strong>  ·  <strong>admissions@gyankunja.edu.np</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    OUR TEAM
+    ============================================================ -->
+    <section class="info-section" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Our Team</h2>
+                <p>Faculty & Staff Directory</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card" style="text-align:center;">
+                    <div style="font-size:48px; color:#d4a017; margin-bottom:6px;">👩‍🏫</div>
+                    <h4>Mrs. Sunita Sharma</h4>
+                    <p style="color:#b8860b; font-weight:600;">Principal</p>
+                    <p>M.Ed. · 18 years experience</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <div style="font-size:48px; color:#d4a017; margin-bottom:6px;">👨‍🏫</div>
+                    <h4>Mr. Ram Adhikari</h4>
+                    <p style="color:#b8860b; font-weight:600;">Academic Head</p>
+                    <p>M.A. English · 12 years experience</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <div style="font-size:48px; color:#d4a017; margin-bottom:6px;">👨‍🔬</div>
+                    <h4>Mr. Krishna Rana</h4>
+                    <p style="color:#b8860b; font-weight:600;">Science Faculty</p>
+                    <p>M.Sc. · 9 years experience</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <div style="font-size:48px; color:#d4a017; margin-bottom:6px;">👩‍💼</div>
+                    <h4>Ms. Gita Poudel</h4>
+                    <p style="color:#b8860b; font-weight:600;">Counselor & Coordinator</p>
+                    <p>M.A. Psychology</p>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:20px; color:#7a6a5a; font-style:italic;">
+                <i class="fas fa-plus-circle" style="color:#d4a017;"></i> + 20 dedicated teaching & support staff
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    GALLERY
+    ============================================================ -->
+    <section class="info-section alt" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-images"></i> Gallery</h2>
+                <p>Campus · Activities · Events</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><i class="fas fa-school"></i> Campus</div>
+                <div class="gallery-item"><i class="fas fa-futbol"></i> Sports</div>
+                <div class="gallery-item"><i class="fas fa-paint-brush"></i> Arts</div>
+                <div class="gallery-item"><i class="fas fa-microphone"></i> Events</div>
+                <div class="gallery-item"><i class="fas fa-users"></i> Students</div>
+                <div class="gallery-item"><i class="fas fa-flask"></i> Science Lab</div>
+                <div class="gallery-item"><i class="fas fa-book-open"></i> Library</div>
+                <div class="gallery-item"><i class="fas fa-music"></i> Music</div>
+            </div>
+            <p style="text-align:center; margin-top:16px; color:#7a6a5a; font-style:italic;">
+                <i class="fas fa-camera" style="color:#d4a017;"></i> Click any tile to view full album (demo)
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    NOTICES
     ============================================================ -->
     <section class="notice-shortcuts" id="notices">
         <div class="container">
@@ -1154,28 +1372,28 @@
                 <div class="notice-item">
                     <div class="n-date"><i class="far fa-calendar-alt"></i> July 15, 2026</div>
                     <h4>Admissions Open 2026–27</h4>
-                    <p>Applications are now being accepted for all grades. Early bird discount available.</p>
+                    <p>Applications now accepted for all grades. Early bird discount available.</p>
                     <span class="n-tag important">Important</span>
                 </div>
 
                 <div class="notice-item">
                     <div class="n-date"><i class="far fa-calendar-alt"></i> July 12, 2026</div>
                     <h4>Annual Sports Day</h4>
-                    <p>Save the date! Our annual sports day will be held on August 25. All students invited.</p>
+                    <p>Save the date! Our annual sports day will be held on August 25.</p>
                     <span class="n-tag event">Event</span>
                 </div>
 
                 <div class="notice-item">
                     <div class="n-date"><i class="far fa-calendar-alt"></i> July 10, 2026</div>
                     <h4>Parent–Teacher Meeting</h4>
-                    <p>PTM for Grades 6–12 on July 30. Progress reports will be distributed.</p>
+                    <p>PTM for all grades on July 30. Progress reports will be distributed.</p>
                     <span class="n-tag meeting">Meeting</span>
                 </div>
 
                 <div class="notice-item">
                     <div class="n-date"><i class="far fa-calendar-alt"></i> July 8, 2026</div>
                     <h4>Art Exhibition</h4>
-                    <p>Our students' artwork will be displayed at the City Hall on August 5–7.</p>
+                    <p>Students' artwork displayed at the City Hall on August 5–7.</p>
                     <span class="n-tag cultural">Cultural</span>
                 </div>
             </div>
@@ -1187,38 +1405,33 @@
     </section>
 
     <!-- ============================================================
-    FACEBOOK & MAP - NOW 50/50 IN ONE ROW
+    CONTACT US
     ============================================================ -->
-    <section class="social-map" id="contact">
+    <section class="info-section" id="contact">
         <div class="container">
-            <!-- Facebook Box - Left 50% -->
-            <div class="box">
-                <div class="box-header">
-                    <i class="fab fa-facebook"></i> Follow Us on Facebook
-                </div>
-                <div class="fb-page-container">
-                    <div class="fb-placeholder">
-                        <i class="fab fa-facebook"></i>
-                        <h4>Gyankunja EBS Dang</h4>
-                        <p>Connect with us for daily updates, photos, and events.</p>
-                        <a href="#" class="fb-btn"><i class="fab fa-facebook"></i> Visit Our Page</a>
-                        <!-- Replace href with your actual Facebook page URL -->
+            <div class="section-header">
+                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                <p>Get in touch · Map · Phone</p>
+            </div>
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Bakulahi, Ghorahi-9, Dang, Lumbini Province</p>
+                    <p><i class="fas fa-phone"></i> +977-985-1234567 (office)</p>
+                    <p><i class="fas fa-envelope"></i> info@gyankunja.edu.np</p>
+                    <p><i class="fas fa-clock"></i> Mon – Fri: 7:30 AM – 4:00 PM</p>
+                    <div style="margin-top:24px; background:#e8e4dc; border-radius:4px; padding:12px 20px; display:inline-block; font-weight:600;">
+                        <i class="fas fa-map" style="color:#d4a017; margin-right:10px;"></i> Google Maps
                     </div>
                 </div>
-            </div>
-
-            <!-- Google Map Box - Right 50% -->
-            <div class="box">
-                <div class="box-header">
-                    <i class="fas fa-map-marker-alt"></i> Find Us Here
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email address" required>
+                        <input type="text" placeholder="Phone (optional)">
+                        <textarea placeholder="Your message / inquiry"></textarea>
+                        <button type="submit"><i class="fas fa-paper-plane" style="margin-right:10px;"></i>Send Message</button>
+                    </form>
                 </div>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.123456789!2d82.489123!3d28.001234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMwJzAwLjAiTiA4MsKwMjknMjAuMCJF!5e0!3m2!1sen!2snp!4v1234567890" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <!-- Replace src with your actual Google Maps embed URL -->
             </div>
         </div>
     </section>
@@ -1229,10 +1442,10 @@
     <footer>
         <div class="container">
             <div>
-                <h4><i class="fas fa-graduation-cap"></i> Gyankunja EBS Dang</h4>
-                <p>Excellence · Beyond · Standards</p>
+                <h4><i class="fas fa-graduation-cap"></i> Gyankunja English School</h4>
+                <p>Excellence · Integrity · Community</p>
                 <p style="margin-top:8px; font-size:14px; color:#8a7a5a;">
-                    Nurturing young minds from Pre-Nursery to Grade 12 with quality education, values, and innovation.
+                    Nurturing young minds from Nursery to Grade 10 with quality education and values.
                 </p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -1244,28 +1457,28 @@
 
             <div>
                 <h4>Quick Links</h4>
-                <a href="#">About Us</a>
-                <a href="#">Academic Calendar</a>
-                <a href="#">Lunch Menu</a>
-                <a href="#">Staff Directory</a>
-                <a href="#">Careers</a>
-                <a href="#">Privacy Policy</a>
+                <a href="#about">About Us</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#team">Our Team</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#notices">Notices</a>
+                <a href="#contact">Contact</a>
             </div>
 
             <div>
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-map-marker-alt" style="color:#d4a017; width:20px;"></i> Dang, Nepal</p>
+                <p><i class="fas fa-map-marker-alt" style="color:#d4a017; width:20px;"></i> Bakulahi, Ghorahi-9, Dang</p>
                 <p><i class="fas fa-phone" style="color:#d4a017; width:20px;"></i> +977-985-1234567</p>
                 <p><i class="fas fa-envelope" style="color:#d4a017; width:20px;"></i> info@gyankunja.edu.np</p>
-                <p><i class="fas fa-clock" style="color:#d4a017; width:20px;"></i> Mon–Fri: 7:00 AM – 4:00 PM</p>
+                <p><i class="fas fa-clock" style="color:#d4a017; width:20px;"></i> Mon–Fri: 7:30 AM – 4:00 PM</p>
             </div>
 
             <div>
                 <h4>Location</h4>
                 <p style="font-size:14px; color:#8a7a5a;">
-                    Gyankunja EBS Dang<br />
-                    Dang District, Lumbini Province<br />
-                    Nepal
+                    Gyankunja English School<br />
+                    Bakulahi, Ghorahi-9<br />
+                    Dang, Lumbini Province, Nepal
                 </p>
                 <a href="#" style="color:#b8860b; font-weight:700;">
                     <i class="fas fa-map-pin"></i> Get Directions
@@ -1273,8 +1486,8 @@
             </div>
 
             <div class="copyright">
-                &copy; 2026 <span>Gyankunja EBS Dang</span>. All rights reserved. 
-                <span style="color:#7a6a5a; font-style:italic;">Designed with care for education.</span>
+                &copy; 2026 <span>Gyankunja English School</span>. All rights reserved.
+                <span style="color:#7a6a5a; font-style:italic;">Excellence in Education</span>
             </div>
         </div>
     </footer>
@@ -1359,7 +1572,7 @@
 
         // ===== ACTIVE NAV =====
         window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section, .hero-slider, .notice-shortcuts, .social-map');
+            const sections = document.querySelectorAll('section, .hero-slider, .notice-shortcuts');
             const navLinks = document.querySelectorAll('.nav-links a:not(.btn-nav)');
             let current = '';
             sections.forEach(section => {
