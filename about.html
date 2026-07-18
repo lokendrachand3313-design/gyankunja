@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyankunja English School · Ghorahi</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* ============================================================
+           RESET & BASE - Times New Roman
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            color: #2c2c2c;
+            background: #f7f5f0;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ============================================================
+           TOP BAR
+           ============================================================ */
+        .top-bar {
+            background: #1a1a1a;
+            color: #d4d0c8;
+            padding: 6px 0;
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 0.3px;
+            border-bottom: 3px solid #b8860b;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .top-bar a {
+            color: #d4d0c8;
+            margin-right: 20px;
+            transition: color 0.2s;
+        }
+
+        .top-bar a:hover {
+            color: #d4a017;
+        }
+
+        .top-bar i {
+            margin-right: 6px;
+            color: #d4a017;
+        }
+
+        /* ============================================================
+           NAVIGATION
+           ============================================================ */
+        nav {
+            background: #ffffff;
+            padding: 14px 0;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid #e8e4dc;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 58px;
+            width: auto;
+            border-radius: 4px;
+            border: 2px solid #d4a017;
+            padding: 2px;
+            background: #fff;
+        }
+
+        .logo-text {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #8a7a5a;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c2c2c;
+            padding: 6px 16px;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #b8860b;
+            border-bottom-color: #b8860b;
+        }
+
+        .nav-links .btn-nav {
+            background: #b8860b;
+            color: #fff !important;
+            padding: 8px 26px;
+            border-radius: 4px;
+            border-bottom: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links .btn-nav:hover {
+            background: #a0760a;
+            border-bottom: none;
+        }
+
+        /* ============================================================
+           HERO SLIDER
+           ============================================================ */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+
+        .hero-slider .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-slider .slide.active {
+            opacity: 1;
+        }
+
+        .hero-slider .slide::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(20, 20, 20, 0.55);
+        }
+
+        .hero-slider .slide-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+
+        .hero-slider .slide-content h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-slider .slide-content h1 span {
+            color: #d4a017;
+        }
+
+        .hero-slider .slide-content p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 19px;
+            color: #e8e4dc;
+            margin-bottom: 24px;
+            font-style: italic;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-slider .slide-content .btn-slide {
+            background: #d4a017;
+            color: #1a1a1a;
+            padding: 12px 38px;
+            border-radius: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.25s;
+            letter-spacing: 0.5px;
+            border: 1px solid #b8860b;
+        }
+
+        .hero-slider .slide-content .btn-slide:hover {
+            background: #b8860b;
+            color: #fff;
+            border-color: #a0760a;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .slider-dots .dot {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: 0.25s;
+            border: 2px solid transparent;
+        }
+
+        .slider-dots .dot.active {
+            background: #d4a017;
+            border-color: #fff;
+        }
+
+        .slider-dots .dot:hover {
+            background: #d4a017;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 14px 20px;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 4px;
+            transition: 0.25s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .slider-arrow:hover {
+            background: rgba(212, 160, 23, 0.3);
+            border-color: #d4a017;
+        }
+
+        .slider-arrow.prev {
+            left: 20px;
+        }
+        .slider-arrow.next {
+            right: 20px;
+        }
+
+        /* ============================================================
+           NOTICE POPUP
+           ============================================================ */
+        .notice-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            backdrop-filter: blur(3px);
+        }
+
+        .notice-popup.show {
+            display: flex;
+        }
+
+        .notice-popup .popup-box {
+            background: #fcfaf7;
+            max-width: 500px;
+            width: 92%;
+            border-radius: 6px;
+            padding: 38px 34px 30px;
+            position: relative;
+            animation: popIn 0.5s ease;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+            border-top: 6px solid #d4a017;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.92) translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .notice-popup .popup-box .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 28px;
+            color: #9a8a7a;
+            cursor: pointer;
+            transition: 0.2s;
+            background: none;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .notice-popup .popup-box .close-popup:hover {
+            color: #b22222;
+            transform: rotate(90deg);
+        }
+
+        .notice-popup .popup-box .popup-icon {
+            font-size: 32px;
+            color: #d4a017;
+            margin-bottom: 6px;
+        }
+
+        .notice-popup .popup-box h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+
+        .notice-popup .popup-box .popup-date {
+            font-size: 14px;
+            color: #8a7a5a;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .notice-popup .popup-box p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #3c3c3c;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .notice-popup .popup-box .popup-btn {
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 10px 34px;
+            border-radius: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.25s;
+            letter-spacing: 0.5px;
+        }
+
+        .notice-popup .popup-box .popup-btn:hover {
+            background: #b8860b;
+        }
+
+        .notice-popup .popup-box .dismiss-text {
+            display: block;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #9a8a7a;
+            cursor: pointer;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        .notice-popup .popup-box .dismiss-text:hover {
+            color: #5a4a3a;
+        }
+
+        /* ============================================================
+           MESSAGE SECTION
+           ============================================================ */
+        .messages {
+            padding: 60px 0 70px;
+            background: #fcfaf7;
+            border-bottom: 1px solid #e8e4dc;
+        }
+
+        .messages .section-header {
+            text-align: center;
+            margin-bottom: 44px;
+        }
+
+        .messages .section-header h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+
+        .messages .section-header h2 i {
+            color: #d4a017;
+            margin-right: 8px;
+        }
+
+        .messages .section-header p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            color: #7a6a5a;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .message-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .message-card {
+            background: #f7f5f0;
+            border-radius: 6px;
+            padding: 32px 26px 28px;
+            text-align: center;
+            border: 1px solid #e8e4dc;
+            transition: 0.25s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .message-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+            border-color: #d4a017;
+        }
+
+        .message-card .avatar-placeholder {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            background: #e8e4dc;
+            color: #5a4a3a;
+            border: 3px solid #d4a017;
+        }
+
+        .message-card h4 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .message-card .title {
+            color: #b8860b;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .message-card .quote-icon {
+            color: #d4a017;
+            font-size: 28px;
+            opacity: 0.3;
+            margin-bottom: 2px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .message-card p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #4a4a4a;
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           NOTICE SHORTCUTS
+           ============================================================ */
+        .notice-shortcuts {
+            padding: 56px 0 60px;
+            background: #f7f5f0;
+            border-bottom: 1px solid #e8e4dc;
+        }
+
+        .notice-shortcuts .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .notice-shortcuts .section-header h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+
+        .notice-shortcuts .section-header p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            color: #7a6a5a;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .notice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 24px;
+        }
+
+        .notice-item {
+            background: #fcfaf7;
+            padding: 22px 26px;
+            border-radius: 4px;
+            border-left: 5px solid #d4a017;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+            transition: 0.25s;
+            border: 1px solid #e8e4dc;
+            border-left-width: 5px;
+        }
+
+        .notice-item:hover {
+            transform: translateX(6px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .notice-item .n-date {
+            font-size: 13px;
+            color: #9a8a7a;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .notice-item h4 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            margin: 4px 0 6px;
+            color: #1a1a1a;
+        }
+
+        .notice-item p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #6a5a4a;
+            font-size: 15px;
+        }
+
+        .notice-item .n-tag {
+            display: inline-block;
+            background: #e8e4dc;
+            color: #5a4a3a;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 2px 14px;
+            border-radius: 3px;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .notice-item .n-tag.important {
+            background: #1a1a1a;
+            color: #f7f5f0;
+        }
+
+        .notice-item .n-tag.event {
+            background: #d4a017;
+            color: #1a1a1a;
+        }
+
+        .notice-item .n-tag.meeting {
+            background: #b8860b;
+            color: #fff;
+        }
+
+        .notice-item .n-tag.cultural {
+            background: #8a7a5a;
+            color: #fff;
+        }
+
+        .view-all-link {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .view-all-link a {
+            font-family: 'Times New Roman', Times, serif;
+            color: #b8860b;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            border-bottom: 2px solid #d4a017;
+            padding-bottom: 2px;
+            transition: 0.2s;
+        }
+
+        .view-all-link a:hover {
+            color: #8a6a0a;
+            border-bottom-color: #8a6a0a;
+        }
+
+        /* ============================================================
+           ABOUT US, ADMISSIONS, OUR TEAM, GALLERY, CONTACT SECTIONS
+           ============================================================ */
+        .info-section {
+            padding: 56px 0 60px;
+            background: #fcfaf7;
+            border-bottom: 1px solid #e8e4dc;
+        }
+
+        .info-section.alt {
+            background: #f7f5f0;
+        }
+
+        .info-section .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-section .section-header h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+
+        .info-section .section-header h2 i {
+            color: #d4a017;
+            margin-right: 8px;
+        }
+
+        .info-section .section-header p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            color: #7a6a5a;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: #ffffff;
+            padding: 28px 26px;
+            border-radius: 6px;
+            border: 1px solid #e8e4dc;
+            transition: 0.25s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            border-color: #d4a017;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-card .card-icon {
+            font-size: 36px;
+            color: #d4a017;
+            margin-bottom: 10px;
+        }
+
+        .info-card h4 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .info-card p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #5a4a3a;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 6px;
+        }
+
+        .info-card ul li {
+            font-family: 'Times New Roman', Times, serif;
+            color: #5a4a3a;
+            font-size: 15px;
+            padding: 3px 0;
+            border-bottom: 1px dotted #e8e4dc;
+        }
+
+        .info-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .info-card ul li i {
+            color: #d4a017;
+            width: 20px;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .gallery-item {
+            background: #e8e4dc;
+            border-radius: 4px;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #5a4a3a;
+            font-weight: 600;
+            border: 1px solid #d4c8b8;
+            transition: 0.25s;
+            background: #f7f5f0;
+            font-size: 15px;
+        }
+
+        .gallery-item i {
+            font-size: 38px;
+            color: #b8860b;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: #b8860b;
+            background: #fcfaf7;
+        }
+
+        /* Contact */
+        .contact-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .contact-info {
+            background: #ffffff;
+            padding: 30px 28px;
+            border-radius: 6px;
+            border: 1px solid #e8e4dc;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .contact-info i {
+            color: #d4a017;
+            width: 28px;
+            font-size: 18px;
+        }
+
+        .contact-form {
+            background: #ffffff;
+            padding: 30px 28px;
+            border-radius: 6px;
+            border: 1px solid #e8e4dc;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 16px;
+            margin: 6px 0 14px;
+            border: 1px solid #d4c8b8;
+            border-radius: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            background: #fcfaf7;
+            transition: 0.2s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #b8860b;
+            outline: none;
+            background: #fff;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background: #b8860b;
+            color: #fff;
+            border: none;
+            padding: 12px 36px;
+            border-radius: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.25s;
+            letter-spacing: 0.5px;
+            width: 100%;
+        }
+
+        .contact-form button:hover {
+            background: #a0760a;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            background: #1a1a1a;
+            color: #d4d0c8;
+            padding: 48px 0 20px;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 36px;
+        }
+
+        footer h4 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #f7f5f0;
+            margin-bottom: 14px;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        footer h4 i {
+            color: #d4a017;
+            margin-right: 8px;
+        }
+
+        footer p,
+        footer a {
+            font-family: 'Times New Roman', Times, serif;
+            color: #b0a898;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        footer a:hover {
+            color: #d4a017;
+            padding-left: 4px;
+        }
+
+        footer .social-icons {
+            display: flex;
+            gap: 16px;
+            margin-top: 6px;
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            font-size: 22px;
+            color: #b0a898;
+            transition: 0.2s;
+        }
+
+        footer .social-icons a:hover {
+            color: #d4a017;
+            transform: translateY(-2px);
+            padding-left: 0;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 28px;
+            border-top: 1px solid #3a3a3a;
+            margin-top: 28px;
+            color: #7a6a5a;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            grid-column: 1 / -1;
+            letter-spacing: 0.5px;
+        }
+
+        .copyright span {
+            color: #d4a017;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 380px;
+            }
+
+            .hero-slider .slide-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-slider .slide-content p {
+                font-size: 17px;
+            }
+
+            .slider-arrow {
+                padding: 10px 16px;
+                font-size: 18px;
+            }
+
+            .contact-flex {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-slider {
+                height: 320px;
+            }
+
+            .hero-slider .slide-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-slider .slide-content p {
+                font-size: 15px;
+            }
+
+            .slider-arrow {
+                display: none;
+            }
+
+            .nav-links {
+                gap: 4px;
+                font-size: 14px;
+                margin-top: 8px;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                padding: 4px 10px;
+            }
+
+            .logo img {
+                height: 44px;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+
+            .logo-text span {
+                font-size: 10px;
+            }
+
+            .top-bar .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                font-size: 13px;
+            }
+
+            .message-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .notice-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .contact-flex {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            footer .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            footer .social-icons {
+                justify-content: center;
+            }
+
+            .notice-popup .popup-box {
+                padding: 28px 20px 22px;
+            }
+
+            .notice-popup .popup-box h2 {
+                font-size: 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .gallery-item {
+                height: 130px;
+                font-size: 13px;
+            }
+
+            .gallery-item i {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 280px;
+            }
+
+            .hero-slider .slide-content h1 {
+                font-size: 20px;
+            }
+
+            .hero-slider .slide-content p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+    TOP BAR
+    ============================================================ -->
+    <div class="top-bar">
+        <div class="container">
+            <div>
+                <i class="fas fa-phone-alt"></i> +977-985-1234567
+                <i class="fas fa-envelope" style="margin-left:16px;"></i> info@gyankunja.edu.np
+            </div>
+            <div>
+                <a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a>
+                <a href="#"><i class="fas fa-user-graduate"></i> Parent Portal</a>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://via.placeholder.com/60x60/1a1a1a/d4a017?text=GY" alt="Gyankunja Logo" />
+                <div class="logo-text">
+                    Gyankunja English School
+                    <span>Ghorahi · Dang · Excellence</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#notices">Notices</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#admissions" class="btn-nav">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+    HERO SLIDER
+    ============================================================ -->
+    <div class="hero-slider" id="home">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=500&fit=crop');">
+            <div class="slide-content">
+                <h1>Welcome to <span>Gyankunja</span></h1>
+                <p>Nurturing young minds from Nursery to Grade 10 with excellence and care.</p>
+                <a href="#admissions" class="btn-slide">Admissions Open</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=500&fit=crop');">
+            <div class="slide-content">
+                <h1>Modern <span>Facilities</span></h1>
+                <p>Well-equipped classrooms, science labs, library, and sports grounds.</p>
+                <a href="#gallery" class="btn-slide">Explore Campus</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1200&h=500&fit=crop');">
+            <div class="slide-content">
+                <h1>Holistic <span>Education</span></h1>
+                <p>Academic excellence combined with arts, sports, and character development.</p>
+                <a href="#about" class="btn-slide">Learn More</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1200&h=500&fit=crop');">
+            <div class="slide-content">
+                <h1>Our <span>Graduates</span> Shine</h1>
+                <p>Preparing students for top institutions and successful careers.</p>
+                <a href="#team" class="btn-slide">Meet Our Team</a>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+
+        <button class="slider-arrow prev" onclick="changeSlide(-1)">‹</button>
+        <button class="slider-arrow next" onclick="changeSlide(1)">›</button>
+    </div>
+
+    <!-- ============================================================
+    NOTICE POPUP
+    ============================================================ -->
+    <div class="notice-popup" id="noticePopup">
+        <div class="popup-box">
+            <button class="close-popup" onclick="closePopup()">✕</button>
+            <div class="popup-icon">📢</div>
+            <h2>Important Notice</h2>
+            <div class="popup-date"><i class="far fa-calendar-alt"></i> Updated: July 15, 2026</div>
+            <p>
+                <strong>Admissions Open for Academic Year 2026–27!</strong><br /><br />
+                We are now accepting applications for Nursery to Grade 10.
+                Limited seats available. <strong>Early bird discount</strong> for applications submitted before August 10.
+                <br /><br />
+                📞 Call us at +977-985-1234567 for inquiries.
+            </p>
+            <button class="popup-btn" onclick="closePopup()">I Understand</button>
+            <span class="dismiss-text" onclick="dismissNotice()">Don't show this again for 7 days</span>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ABOUT US
+    ============================================================ -->
+    <section class="info-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-info-circle"></i> About Us</h2>
+                <p>History · Mission · Vision · Values</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-school"></i></div>
+                    <h4>Our School</h4>
+                    <p>Gyankunja English School is a private, co-educational institution located in Bakulahi, Ghorahi-9, Dang. We offer a strong academic foundation from Nursery to Grade 10, following the Nepal Government curriculum enriched with modern pedagogy.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Vision & Mission</h4>
+                    <p><strong>Vision:</strong> To empower young minds with knowledge, integrity, and compassion, shaping responsible global citizens rooted in Nepali values.</p>
+                    <p style="margin-top:8px;"><strong>Mission:</strong> To provide quality education that nurtures curiosity, critical thinking, and lifelong learning.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-heart"></i></div>
+                    <h4>Core Values</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Excellence</li>
+                        <li><i class="fas fa-check"></i> Integrity</li>
+                        <li><i class="fas fa-check"></i> Respect</li>
+                        <li><i class="fas fa-check"></i> Community</li>
+                        <li><i class="fas fa-check"></i> Curiosity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    ADMISSIONS
+    ============================================================ -->
+    <section class="info-section alt" id="admissions">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-door-open"></i> Admissions</h2>
+                <p>Apply · Tuition · Open House · Inquiry</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+                    <h4>Apply Online</h4>
+                    <p>Fill the application form or download it. Open House dates are announced every spring — come see us!</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h4>Tuition & Fees</h4>
+                    <p>Transparent fee structure with flexible payment plans. Scholarships available for meritorious students.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h4>Open House</h4>
+                    <p>Visit our campus, meet teachers, and explore our facilities. Next Open House: 2026 · TBA</p>
+                </div>
+            </div>
+            <div style="background:#e8e4dc; border-radius:4px; padding:16px 24px; margin-top:24px; text-align:center;">
+                <i class="fas fa-phone-alt" style="color:#b8860b; margin-right:10px;"></i>
+                <strong>+977-985-1234567</strong>  ·  <strong>admissions@gyankunja.edu.np</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    OUR TEAM
+    ============================================================ -->
+    <section class="info-section" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Our Team</h2>
+                <p>Faculty & Staff Directory</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card" style="text-align:center;">
+                    <div style="font-size:48px; color:#d4a017; margin-bottom:6px;">👩‍🏫</div>
+                    <h4>Mrs. Sunita Sharma</h4>
+                    <p style="color:#b8860b; font-weight:600;">Principal</p>
+                    <p>M.Ed. · 18 years experience</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <div style="font-size:48px; color:#d4a017; margin-bottom:6px;">👨‍🏫</div>
+                    <h4>Mr. Ram Adhikari</h4>
+                    <p style="color:#b8860b; font-weight:600;">Academic Head</p>
+                    <p>M.A. English · 12 years experience</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <div style="font-size:48px; color:#d4a017; margin-bottom:6px;">👨‍🔬</div>
+                    <h4>Mr. Krishna Rana</h4>
+                    <p style="color:#b8860b; font-weight:600;">Science Faculty</p>
+                    <p>M.Sc. · 9 years experience</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <div style="font-size:48px; color:#d4a017; margin-bottom:6px;">👩‍💼</div>
+                    <h4>Ms. Gita Poudel</h4>
+                    <p style="color:#b8860b; font-weight:600;">Counselor & Coordinator</p>
+                    <p>M.A. Psychology</p>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:20px; color:#7a6a5a; font-style:italic;">
+                <i class="fas fa-plus-circle" style="color:#d4a017;"></i> + 20 dedicated teaching & support staff
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    GALLERY
+    ============================================================ -->
+    <section class="info-section alt" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-images"></i> Gallery</h2>
+                <p>Campus · Activities · Events</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><i class="fas fa-school"></i> Campus</div>
+                <div class="gallery-item"><i class="fas fa-futbol"></i> Sports</div>
+                <div class="gallery-item"><i class="fas fa-paint-brush"></i> Arts</div>
+                <div class="gallery-item"><i class="fas fa-microphone"></i> Events</div>
+                <div class="gallery-item"><i class="fas fa-users"></i> Students</div>
+                <div class="gallery-item"><i class="fas fa-flask"></i> Science Lab</div>
+                <div class="gallery-item"><i class="fas fa-book-open"></i> Library</div>
+                <div class="gallery-item"><i class="fas fa-music"></i> Music</div>
+            </div>
+            <p style="text-align:center; margin-top:16px; color:#7a6a5a; font-style:italic;">
+                <i class="fas fa-camera" style="color:#d4a017;"></i> Click any tile to view full album (demo)
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    NOTICES
+    ============================================================ -->
+    <section class="notice-shortcuts" id="notices">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-bullhorn"></i> Latest Notices</h2>
+                <p>Stay updated with important announcements and events</p>
+            </div>
+
+            <div class="notice-grid">
+                <div class="notice-item">
+                    <div class="n-date"><i class="far fa-calendar-alt"></i> July 15, 2026</div>
+                    <h4>Admissions Open 2026–27</h4>
+                    <p>Applications now accepted for all grades. Early bird discount available.</p>
+                    <span class="n-tag important">Important</span>
+                </div>
+
+                <div class="notice-item">
+                    <div class="n-date"><i class="far fa-calendar-alt"></i> July 12, 2026</div>
+                    <h4>Annual Sports Day</h4>
+                    <p>Save the date! Our annual sports day will be held on August 25.</p>
+                    <span class="n-tag event">Event</span>
+                </div>
+
+                <div class="notice-item">
+                    <div class="n-date"><i class="far fa-calendar-alt"></i> July 10, 2026</div>
+                    <h4>Parent–Teacher Meeting</h4>
+                    <p>PTM for all grades on July 30. Progress reports will be distributed.</p>
+                    <span class="n-tag meeting">Meeting</span>
+                </div>
+
+                <div class="notice-item">
+                    <div class="n-date"><i class="far fa-calendar-alt"></i> July 8, 2026</div>
+                    <h4>Art Exhibition</h4>
+                    <p>Students' artwork displayed at the City Hall on August 5–7.</p>
+                    <span class="n-tag cultural">Cultural</span>
+                </div>
+            </div>
+
+            <div class="view-all-link">
+                <a href="#">View All Notices →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CONTACT US
+    ============================================================ -->
+    <section class="info-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                <p>Get in touch · Map · Phone</p>
+            </div>
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Bakulahi, Ghorahi-9, Dang, Lumbini Province</p>
+                    <p><i class="fas fa-phone"></i> +977-985-1234567 (office)</p>
+                    <p><i class="fas fa-envelope"></i> info@gyankunja.edu.np</p>
+                    <p><i class="fas fa-clock"></i> Mon – Fri: 7:30 AM – 4:00 PM</p>
+                    <div style="margin-top:24px; background:#e8e4dc; border-radius:4px; padding:12px 20px; display:inline-block; font-weight:600;">
+                        <i class="fas fa-map" style="color:#d4a017; margin-right:10px;"></i> Google Maps
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email address" required>
+                        <input type="text" placeholder="Phone (optional)">
+                        <textarea placeholder="Your message / inquiry"></textarea>
+                        <button type="submit"><i class="fas fa-paper-plane" style="margin-right:10px;"></i>Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
+        <div class="container">
+            <div>
+                <h4><i class="fas fa-graduation-cap"></i> Gyankunja English School</h4>
+                <p>Excellence · Integrity · Community</p>
+                <p style="margin-top:8px; font-size:14px; color:#8a7a5a;">
+                    Nurturing young minds from Nursery to Grade 10 with quality education and values.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <a href="#about">About Us</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#team">Our Team</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#notices">Notices</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div>
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt" style="color:#d4a017; width:20px;"></i> Bakulahi, Ghorahi-9, Dang</p>
+                <p><i class="fas fa-phone" style="color:#d4a017; width:20px;"></i> +977-985-1234567</p>
+                <p><i class="fas fa-envelope" style="color:#d4a017; width:20px;"></i> info@gyankunja.edu.np</p>
+                <p><i class="fas fa-clock" style="color:#d4a017; width:20px;"></i> Mon–Fri: 7:30 AM – 4:00 PM</p>
+            </div>
+
+            <div>
+                <h4>Location</h4>
+                <p style="font-size:14px; color:#8a7a5a;">
+                    Gyankunja English School<br />
+                    Bakulahi, Ghorahi-9<br />
+                    Dang, Lumbini Province, Nepal
+                </p>
+                <a href="#" style="color:#b8860b; font-weight:700;">
+                    <i class="fas fa-map-pin"></i> Get Directions
+                </a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2026 <span>Gyankunja English School</span>. All rights reserved.
+                <span style="color:#7a6a5a; font-style:italic;">Excellence in Education</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ===== SLIDER =====
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slider .slide');
+        const dots = document.querySelectorAll('.slider-dots .dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+        }
+
+        function changeSlide(direction) {
+            let newIndex = currentSlide + direction;
+            if (newIndex < 0) newIndex = totalSlides - 1;
+            if (newIndex >= totalSlides) newIndex = 0;
+            showSlide(newIndex);
+        }
+
+        dots.forEach((dot) => {
+            dot.addEventListener('click', function() {
+                showSlide(parseInt(this.dataset.slide));
+            });
+        });
+
+        setInterval(() => changeSlide(1), 5000);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // ===== NOTICE POPUP =====
+        function closePopup() {
+            document.getElementById('noticePopup').classList.remove('show');
+        }
+
+        function dismissNotice() {
+            const now = new Date();
+            now.setTime(now.getTime() + (7 * 24 * 60 * 60 * 1000));
+            document.cookie = "noticeDismissed=true; expires=" + now.toUTCString() + "; path=/";
+            closePopup();
+        }
+
+        function checkNotice() {
+            const dismissed = document.cookie.split('; ').some(row => row.startsWith('noticeDismissed=true'));
+            if (!dismissed) {
+                setTimeout(() => {
+                    document.getElementById('noticePopup').classList.add('show');
+                }, 1500);
+            }
+        }
+
+        document.getElementById('noticePopup').addEventListener('click', function(e) {
+            if (e.target === this) closePopup();
+        });
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== ACTIVE NAV =====
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section, .hero-slider, .notice-shortcuts');
+            const navLinks = document.querySelectorAll('.nav-links a:not(.btn-nav)');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id') || '';
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ===== INIT =====
+        showSlide(0);
+        checkNotice();
+    </script>
+
+</body>
+</html>
